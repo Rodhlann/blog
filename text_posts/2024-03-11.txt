@@ -25,7 +25,7 @@ Once that was all set I went and broke out the blog in to its own repository, an
 and working as you see it now! Fantastic!
 
 The next project I'm working on is a JS implementation of the A* search algorithm. This is something
-I've been working on for a bit for a <a href="https://tic80.com/">TIC-80</a> game I'm working on, but I keep getting overwhelmed
+I've been doing for a <a href="https://tic80.com/">TIC-80</a> game I'm working on, but I keep getting overwhelmed
 and figure it's probably best to just do this part in isolation and then write it in to the game once
 it's complete! 
 
