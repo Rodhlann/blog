@@ -1,4 +1,4 @@
-const ROOT_PATH = './blog'
+const ROOT_PATH = './'
 const OUTPUT_PATH = `${ROOT_PATH}/posts`
 const INPUT_PATH = `${ROOT_PATH}/text_posts`
 

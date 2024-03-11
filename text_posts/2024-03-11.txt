@@ -1,0 +1,35 @@
+[Mon Mar 11 2024]
+
+In my last post I mentioned that I had gotten my project / website structure up and running!
+Well I was wrong! It was completely hosed, so I've gone ahead and completely rebuilt the whole
+thing.
+
+Previously I was just hosting a single Github Pages repository called `home-page` that just had
+all my home page html and all the generator code for the blog in one place. I pretty rapidly
+found that if I wanted to keep adding new projects and whatnot to my website that that solution
+was going to scale horribly. Both because it was a lot to manage in one repo, but also because
+I just wanted to have everything nice and compartmentalized. 
+
+At first I went and tried to create just another test repo and link it to my timpepper.dev domain, 
+but Github didn't like that. I was pretty confused, but it seemed like it should just be that
+easy!! It turns out it is that easy and I was just didn't read the docs at all... 
+
+So the way you're supposed to do it is by creating a repository for your root Github
+Pages homepage, in my case a repo called rodhlann.github.com. Once that's ready you connect that up
+with your custom domain (e.g. timpepper.dev), if you want. Once that's all set the new repo acts as 
+your "home page", with whatever HTML document you put as the index.html in the root of that repo. 
+
+Then all of your Github Pages enabled repos just show up as routes for that home page! Pretty neat!
+
+Once that was all set I went and broke out the blog in to its own repository, and got it all set up
+and working as you see it now! Fantastic!
+
+The next project I'm working on is a JS implementation of the A* search algorithm. This is something
+I've been working on for a bit for a <a href="https://tic80.com/">TIC-80</a> game I'm working on, but I keep getting overwhelmed
+and figure it's probably best to just do this part in isolation and then write it in to the game once
+it's complete! 
+
+Hopefully will have some updates around that up soon, I just published the base UI I'll be using for
+testing and displaying the logic, so yeah! 
+
+Peace! 
