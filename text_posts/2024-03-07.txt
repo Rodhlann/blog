@@ -1,0 +1,14 @@
+[Thu Mar 07 2024]
+
+Another day hacking away at this blog! I was hoping to have a bit more of a clean setup
+for this repository, but I think it's fine as is for now.
+
+I've got it set up so that I can just write my blog posts as plain text files and the blog
+html is updated and generated on build. I was hoping to have it be a little more automated,
+but I think that's a project for another day. As long as the merge to the main branch is
+working! 
+
+Narrator voice: "It was not working..."
+
+Cool to finally get to work a bit with github actions, though I wish the docs were a little
+more clear. Got spoiled with the Gitlab CI documentation! 

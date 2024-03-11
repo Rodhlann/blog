@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-03-07.txt</div>
+        
+<p>[Thu Mar 07 2024]</p>
+<p>Another day hacking away at this blog! I was hoping to have a bit more of a clean setup
+for this repository, but I think it's fine as is for now.</p>
+<p>I've got it set up so that I can just write my blog posts as plain text files and the blog
+html is updated and generated on build. I was hoping to have it be a little more automated,
+but I think that's a project for another day. As long as the merge to the main branch is
+working! </p>
+<p>Narrator voice: "It was not working..."</p>
+<p>Cool to finally get to work a bit with github actions, though I wish the docs were a little
+more clear. Got spoiled with the Gitlab CI documentation! </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>

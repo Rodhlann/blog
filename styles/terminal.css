@@ -1,0 +1,96 @@
+html {
+  display: flex;
+  justify-content: space-around;
+  background: fixed linear-gradient(135deg, #140030, #000000);
+  font-family: "Lucida Console", Monaco, monospace;
+  font-size: 16px;
+  line-height: 19px;
+  letter-spacing: .02rem;
+}
+  
+body {
+  color: yellow;
+  border: 0px;
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+  min-height: 60vh;
+  box-shadow: 10px 10px 0 3px rgba(0, 0, 0, 0.5);
+  margin-top: 20px;
+}
+
+a {
+  color: lightblue;
+}
+
+p {
+  color: beige;
+}
+
+header {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 35px;
+  color: black;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: solid rgba(255, 255, 255, 0.384) 1px;
+  border-bottom: 0px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+article {
+  height: 100%;
+  padding-right: 5px;
+}
+
+section {
+  background-color: #0c0c0c;
+}
+
+.date {
+  color: cyan;
+}
+
+#terminal {
+  height: 100%;
+  padding: 5px;
+  padding-right: 0px;
+  border: 1px rgba(255, 255, 255, 0.39) solid;
+  border-top: 0px;
+  padding-bottom: 20px;
+}
+
+@keyframes toggle {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
+
+#cursor {
+  animation: toggle 1.5s infinite;
+}
+
+@media (min-width: 750px) {
+  .mobile-break {
+    display: none;
+  }
+}
+
+@media (max-width: 750px) {
+  html {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  body {
+    width: 100%;
+    margin-top: 10px;
+  }
+  header {
+    font-size: 22px;
+    height: 40px;
+  }
+}
+

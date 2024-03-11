@@ -1,0 +1,10 @@
+[Tue Aug 25 2020]
+
+Hey there, I'm Tim Pepper, a software developer living in the beautiful American North East.
+I've been trying for a pretty long time to create a format for a blog I was happy with. 
+There's something really special to me about the simplicty of a shell, and all of my most 
+succesful dives in to journaling or writing have lived right inside of one.
+
+I hope to continue using this project to create more blog related content. It's probably
+just going to be coding project related talk or personal blather, but yelling to the void 
+is pretty cathartic! I guess we'll see how long I can keep up with it.

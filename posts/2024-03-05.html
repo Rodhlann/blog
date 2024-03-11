@@ -1,0 +1,42 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-03-05.txt</div>
+        
+<p>[Tue Mar 05 2024]</p>
+<p>Wow! I just stumbled on this project after creating it and immediately abandoning it... as one does?
+I think I will be using this is a playground for other little dev projects I want to work on, but perhaps
+I will continue updating it with various thoughts and whatnot in the future! </p>
+<p>It's actually kind of funny, I was in the process of creating another repo called "home-page", to make
+little projects with, when I stumbled upon this one I had created, abandoned, and forgotten about that 
+shared the very same name! Weird how the mind works sometimes. </p>
+<p>Anyways, welcome! See you around...</p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>

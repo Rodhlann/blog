@@ -1,0 +1,16 @@
+[Wed Mar 06 2024]
+
+The scope for this little website is ballooning a bit. 
+
+I want to try and keep track of various side projects here, 
+and also give myself an attractive home page so I can share my work, 
+or just show it off to friends and family, or just keep a log of what
+I'm doing for myself, even.
+
+Unfortunately, I am no UI developer... Which I think is plain to see,
+both in the current state of my home page, as well as with the design
+of my blog. I think that's okay!! I can't expect to be immediately
+good at everything, or immediately happy with everything I create. 
+But I do hope to have this in a presentable state eventually!
+
+Wish me luck! 
