@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-03-12.txt</div>
+        
+<p>[Mon Mar 11 2024]</p>
+<p>Made some pretty good progress on my A* repository UI today. Didn't work on the actual
+search logic at all, but now you can at least click around in the grid and add collision,
+start, and end points. </p>
+<p>I actually had to solve a pretty fun math problem to get it working properly! Because the
+grid is a 20x20 space, but the HTML canvas is 500x500 pixels, I needed a way to convert
+between the two so I could manage the state. I've got it set up now so you can click anywhere
+in the canvas and it will correctly update the grid state and cells accordingly! Nothing
+too crazy, but I certainly feel good about not having to look up how to do it! </p>
+<p>Next steps will be fleshing out the UI so that I don't feel it constantly nagging at
+me. Then I will be able to just focus on the search algorithm implementation. </p>
+<p>It's really exciting to have a place to put my work now with this Github pages setup! Usually 
+I just power through something and it just ends up collecting dust in Github, or worse, my 
+local computer, forever. </p>
+<p>But no longer!! I hope! </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>
