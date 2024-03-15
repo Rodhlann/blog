@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-03-15.txt</div>
+        
+<p>[Fri Mar 15 2024]</p>
+<p>Just did a pretty big UI update for the A* search page. It's not super pretty
+yet, but it does have all the general functionality I'd expect a test / demo
+UI for something similar to have. </p>
+<p>It's kind of funny because I always
+have these grand ideas for how a web page should or could look, and then when
+I get in to setting it up the vision just disappears. I honestly have no idea
+how I will go about making this look better... but I think that's fine for now.</p>
+<p>Also, I really really dislike working with CSS! It's always such a pain, and 
+I feel like no matter how much time I put in to learning it I am never really
+improving. I doubt there's anything better for the job out there, but boy I 
+wish there was! </p>
+<p>Anyways, next dev session will be starting work on the A* logic!! Very exciting
+stuff. I haven't actually decided how I will display the path yet, but that
+shouldn't be too hard once I get in to the thick of it. 
+</p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>
