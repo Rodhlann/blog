@@ -1,0 +1,35 @@
+[Tue Mar 19 2024]
+
+I haven't merged the code to my main branch yet, but I've 
+made some serious progress on the A* algorithm logic!!
+
+I now have the UI populating with output from the algorithm
+that displays the general search pattern up to the end point.
+I would like to refine it a bit to show the most direct path
+as well as some information about the searched area. 
+
+There's also still a bit of additional work that needs to be
+done on the logic itself before I'll be ready to merge. 
+
+Firstly, it's not always successful. If I try to get it to find an end
+point within a nearly blocked off space it can some times go
+indefinitely without finding a route. With only 400 cells 
+that seems like a bug more than anything else. 
+
+It's also pretty slow, I think there's a lot I can do to improve
+performance, especially after seeing other examples online.
+
+I'd also like to improve the UX by giving a user the ability to
+drag to place cells instead of clicking, which feels pretty
+tedious in it's current state. 
+
+Overall I am very happy with my progress though! I have been
+working on various iterations of this project for a few months
+and it finally feels like I'm making it happen. The first time
+I successfully generated a complex path that didn't get hung up
+on anything obvious I was honestly kind of mind blown!!!
+
+Really excited to be able to share my progress, even if it's
+only with my future self. I think this is a pretty notable
+moment of learning for myself! 
+

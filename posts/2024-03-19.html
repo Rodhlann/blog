@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-03-19.txt</div>
+        
+<p>[Tue Mar 19 2024]</p>
+<p>I haven't merged the code to my main branch yet, but I've 
+made some serious progress on the A* algorithm logic!!</p>
+<p>I now have the UI populating with output from the algorithm
+that displays the general search pattern up to the end point.
+I would like to refine it a bit to show the most direct path
+as well as some information about the searched area. </p>
+<p>There's also still a bit of additional work that needs to be
+done on the logic itself before I'll be ready to merge. </p>
+<p>Firstly, it's not always successful. If I try to get it to find an end
+point within a nearly blocked off space it can some times go
+indefinitely without finding a route. With only 400 cells 
+that seems like a bug more than anything else. </p>
+<p>It's also pretty slow, I think there's a lot I can do to improve
+performance, especially after seeing other examples online.</p>
+<p>I'd also like to improve the UX by giving a user the ability to
+drag to place cells instead of clicking, which feels pretty
+tedious in it's current state. </p>
+<p>Overall I am very happy with my progress though! I have been
+working on various iterations of this project for a few months
+and it finally feels like I'm making it happen. The first time
+I successfully generated a complex path that didn't get hung up
+on anything obvious I was honestly kind of mind blown!!!</p>
+<p>Really excited to be able to share my progress, even if it's
+only with my future self. I think this is a pretty notable
+moment of learning for myself! </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>

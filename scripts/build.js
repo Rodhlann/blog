@@ -9,14 +9,16 @@ function main() {
     const posts = fs.readdirSync(INPUT_PATH)
 
     console.log(`[INFO] Generating HTML posts from text posts`)
-    const generated = posts.map((fileName) => {
-      const text = fs.readFileSync(`${INPUT_PATH}/${fileName}`, 'utf8')
-      const generatedPost = generatePostHtml(text, fileName)
-      return {
-        name: fileName.split('.')[0],
-        html: generatedPost
-      }
-    })
+    const generated = posts
+      .sort((a, b) => b.localeCompare(a))
+      .map((fileName) => {
+        const text = fs.readFileSync(`${INPUT_PATH}/${fileName}`, 'utf8')
+        const generatedPost = generatePostHtml(text, fileName)
+        return {
+          name: fileName.split('.')[0],
+          html: generatedPost
+        }
+      })
 
     console.log(`[INFO] Deleting output dir`)
     fs.rmdirSync(OUTPUT_PATH, { recursive: true, force: true })
