@@ -20,7 +20,7 @@ const htmlFromTemplate = (content) => `<!DOCTYPE HTML>
     <section id="terminal">
       <article>
         <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;ls</div>
+        <div>$&nbsp;ls -1</div>
          
 ${content}
 
