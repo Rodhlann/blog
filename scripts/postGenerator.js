@@ -1,4 +1,6 @@
+const fs = require('node:fs')
 const { headerFromTemplate } = require('./headerGenerator.js')
+const { INPUT_PATH, POSTS_PATH } = require('./constants.js')
 
 const htmlFromTemplate = (body, fileName) => `<!DOCTYPE HTML>
 
@@ -40,6 +42,52 @@ const generatePostHtml = (rawText, fileName) => {
   return htmlFromTemplate(body, fileName)
 }
 
+function generatePosts(output, path = INPUT_PATH, dirName = '') {
+  try {
+    const readPath = `${path}/${dirName}`
+    
+    console.log(`[INFO] Reading posts from dir -`, readPath)
+    const contents = fs.readdirSync(readPath)
+
+    const [posts, dirs] = contents.reduce(([posts, dirs], file) => 
+      file.includes('.txt')
+      ? [[...posts, file], dirs]
+      : [posts, [...dirs, file]],
+    [[],[]])
+
+    console.log(`[INFO] Generating HTML posts from text posts`)
+    const generated = posts
+      .sort((a, b) => b.localeCompare(a))
+      .map((fileName) => {
+        const text = fs.readFileSync(`${readPath}/${fileName}`, 'utf8')
+        const generatedPost = generatePostHtml(text, fileName)
+        return {
+          name: fileName.split('.')[0],
+          html: generatedPost
+        }
+      })
+
+    const outputDirName =  `${POSTS_PATH}${dirName && `/${dirName}`}`
+    if (!fs.existsSync(outputDirName)){
+      console.log(`[INFO] Creating dir`, outputDirName)
+      fs.mkdirSync(outputDirName);
+    }
+    
+    console.log(`[INFO] Writing HTML posts to output dir`)
+    generated.forEach(({name, html}) => {
+      fs.writeFileSync(`${outputDirName}/${name}.html`, html)
+    })
+
+    dirs.forEach((name) => {
+      generatePosts(output, path, name)
+    });
+
+    output[outputDirName] = generated;
+  } catch (e) {
+    console.log(`[ERROR]`, e.message)
+  }
+}
+
 module.exports = {
-  generatePostHtml
+  generatePosts
 }

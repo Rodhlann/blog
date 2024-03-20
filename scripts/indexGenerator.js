@@ -1,4 +1,5 @@
 const { headerFromTemplate } = require('./headerGenerator.js')
+const { POSTS_PATH } = require('./constants.js')
 
 const htmlFromTemplate = (content) => `<!DOCTYPE HTML>
 
@@ -32,9 +33,16 @@ ${content}
 
 </html>`
 
+/*
+  posts: { [ dir: string ]: { name: string; html: string }[] }
+*/
 const generateIndexHtml = (posts) => {
-  const content = posts.map((name) => `<p>&nbsp;<a href="./posts/${name}.html">${name}.txt</a></p>`).join('\n')
-  return htmlFromTemplate(content)
+  const postLinks = posts[POSTS_PATH]
+    .map(({name}) => `<p>&nbsp;<a href="./posts/${name}.html">${name}.txt</a></p>`).join('\n')
+  const dirLinks = Object.keys(posts)
+    .filter((key) => key !== POSTS_PATH)
+    .map((dirName) => `<p>&nbsp;<b><a href=".${dirName.replace(POSTS_PATH, '')}">${dirName.replace(POSTS_PATH + '/', '')}/</a></b></p>`).join('\n')
+  return htmlFromTemplate(`${postLinks}\n${dirLinks}`)
 }
 
 module.exports = {
