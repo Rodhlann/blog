@@ -37,12 +37,18 @@ ${content}
   posts: { [ dir: string ]: { name: string; html: string }[] }
 */
 const generateIndexHtml = (posts) => {
+  Object.keys(posts).forEach((dir) => {
   const postLinks = posts[POSTS_PATH]
-    .map(({name}) => `<p>&nbsp;<a href="./posts/${name}.html">${name}.txt</a></p>`).join('\n')
-  const dirLinks = Object.keys(posts)
-    .filter((key) => key !== POSTS_PATH)
-    .map((dirName) => `<p>&nbsp;<b><a href=".${dirName.replace(POSTS_PATH, '')}">${dirName.replace(POSTS_PATH + '/', '')}/</a></b></p>`).join('\n')
-  return htmlFromTemplate(`${postLinks}\n${dirLinks}`)
+      .map(({name}) => `<p>&nbsp;<a href="./posts/${name}.html">${name}.txt</a></p>`).join('\n')
+
+    const dirLinks = Object.keys(posts)
+      .filter((key) => key !== POSTS_PATH)
+      .map((dirName) => `<p>&nbsp;<b><a href=".${dirName.replace(POSTS_PATH, '')}">${dirName.replace(POSTS_PATH + '/', '')}/</a></b></p>`).join('\n')
+    
+    console.log('[INFO] Writing HTML index.html to root')
+    const htmlContent = htmlFromTemplate(`${postLinks}\n${dirLinks}`)
+    fs.writeFileSync(`${dir}/index.html`, htmlContent)
+  })
 }
 
 module.exports = {
