@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width; initial-scale=1.0;">
+    <link rel="stylesheet" href="../../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;ls -1</div>
+         
+<p>&nbsp;<a href="./posts/CODING/2020-08-25.txt.html">2020-08-25.txt.txt</a></p>
+<p>&nbsp;<a href="./posts/CODING/2024-03-05.txt.html">2024-03-05.txt.txt</a></p>
+<p>&nbsp;<a href="./posts/CODING/2024-03-06.txt.html">2024-03-06.txt.txt</a></p>
+<p>&nbsp;<b><a href="./posts/CODING/test">test/</a></b></p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+
+</html>

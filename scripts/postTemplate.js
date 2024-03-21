@@ -1,11 +1,11 @@
 const fs = require('node:fs')
-const { headerFromTemplate } = require('./headerGenerator.js')
+const { headerFromTemplate } = require('./headerTemplate.js')
 const { INPUT_PATH, POSTS_PATH } = require('./constants.js')
 
-const htmlFromTemplate = (body, fileName) => `<!DOCTYPE HTML>
+const htmlFromTemplate = (header, content, fileName) => `<!DOCTYPE HTML>
 
 <html>
-  ${headerFromTemplate('../styles/terminal.css')}
+  ${header}
 
   <script>
     function setDate() {
@@ -24,7 +24,7 @@ const htmlFromTemplate = (body, fileName) => `<!DOCTYPE HTML>
         <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
         <div>$&nbsp;cat ${fileName}</div>
         
-${body}
+${content}
 
         <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
         <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
@@ -34,12 +34,14 @@ ${body}
 </html>`
 
 const generatePostHtml = (rawText, fileName) => {
-  const body = rawText.replaceAll('\r\n', '\n')
+  const headerContent = headerFromTemplate('../styles/terminal.css')
+
+  const htmlContent = rawText.replaceAll('\r\n', '\n')
     .split('\n\n')
     .filter(Boolean)
     .map((section) => `<p>${section}</p>`).join('\n')
 
-  return htmlFromTemplate(body, fileName)
+  return htmlFromTemplate(headerContent, htmlContent, fileName)
 }
 
 function generatePosts(output, path = INPUT_PATH, dirName = '') {

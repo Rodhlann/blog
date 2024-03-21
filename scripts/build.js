@@ -1,72 +1,24 @@
-const fs = require('node:fs')
-const { generatePosts } = require('./postGenerator.js')
-const { generateIndexHtml } = require('./indexGenerator.js')
 const { INPUT_PATH, POSTS_PATH } = require('./constants.js')
-
-function main_deprecated() {
-  const generated = {}
-
-  console.log('[INFO] Generating posts')
-  generatePosts(generated)
-
-  console.log('[INFO] Generating index.html')
-  generateIndexHtml(generated)
-}
-
-function generateDirectoryTree(inputDir, outputDir, tree = []) {
-  const files = fs.readdirSync(inputDir)
-  const [posts, dirs] = files.reduce(([posts, dirs], file) => 
-    file.includes('.txt')
-    ? [[...posts, file], dirs]
-    : [posts, [...dirs, file]],
-  [[],[]])
-
-  tree.push({
-    name: outputDir,
-    posts,
-    dirs: []
-  })
-
-  dirs.forEach((name) => {
-    const nextDir = `${outputDir}/${name}`
-    tree[0].dirs.push(generateDirectoryTree(
-        `${inputDir}/${name}`,
-        nextDir, 
-        tree[0]
-      )
-    )
-  })
-
-  return tree
-}
-
-// [
-//   {
-//     name: '.',
-//     posts: [ 'a.txt', 'b.txt' ],
-//     dirs: [
-//       {
-//         name: './code',
-//         posts: [ 'c.txt', 'd.txt' ],
-//         dirs: []
-//       },
-//       {
-//         name: './bread',
-//         posts: [ 'e.txt', 'f.txt' ],
-//         dirs: []
-//       }
-//     ]
-//   }
-// ]
+const { generate } = require('./generate.js')
+const { generateDirectoryTree } = require('./generateDirectoryTree.js')
+const { log } = require('./util/logger.js')
 
 function main() {
-  // const readPath = `${path}/${dirName}`
-    
-  // console.log(`[INFO] Reading posts from dir -`, readPath)
-  // const contents = fs.readdirSync(readPath)
+  log.info('Here we go!')
 
+  try {
+  // Read files and dirs from INPUT_PATH and generate output tree for POSTS_PATH
   const tree = generateDirectoryTree(INPUT_PATH, POSTS_PATH)
-  console.log(JSON.stringify(tree, null, 2))
+
+  // Generate all posts and related index pages
+  generate(tree)
+  } catch (e) {
+    log.error('Failed to generate blog output', { errorMessage: e.message })
+    log.error('FAIL!')
+    return;
+  }
+  
+  log.info('SUCCESS!')
 }
 
 main()
