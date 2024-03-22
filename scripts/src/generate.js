@@ -1,6 +1,6 @@
 const { generateIndexHtml } = require("./indexTemplate")
 const { generatePosts } = require("./postTemplate")
-const { log } = require("./util/logger")
+const { log } = require("../util/logger")
 
 /**
  * 

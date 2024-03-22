@@ -1,8 +1,8 @@
 const fs = require('node:fs')
 
-const { INPUT_PATH, POSTS_PATH } = require('./constants.js')
-const { generate } = require('./generate.js')
-const { generateDirectoryTree } = require('./generateDirectoryTree.js')
+const { INPUT_PATH, POSTS_PATH } = require('./src/constants.js')
+const { generate } = require('./src/generate.js')
+const { generateDirectoryTree } = require('./src/generateDirectoryTree.js')
 const { log } = require('./util/logger.js')
 
 function main() {

@@ -1,7 +1,7 @@
 const fs = require('node:fs')
 const { headerFromTemplate } = require('./headerTemplate.js')
-const { log } = require('./util/logger.js')
-const { calculateRelativePathString } = require('./util/calculateRelativePathString.js')
+const { log } = require('../util/logger.js')
+const { calculateRelativePathString } = require('../util/calculateRelativePathString.js')
 const { POSTS_PATH, HOME_URL } = require('./constants.js')
 
 const htmlFromTemplate = (header, content, backLink) => `<!DOCTYPE HTML>

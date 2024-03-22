@@ -1,5 +1,5 @@
 const fs = require('node:fs')
-const { log } = require('./util/logger')
+const { log } = require('../util/logger')
 
 // [
 //   {
