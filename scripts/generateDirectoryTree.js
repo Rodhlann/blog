@@ -39,9 +39,12 @@ function generateDirectoryTree(inputDir, outputDir, tree = []) {
    : [posts, [...dirs, file]],
  [[],[]])
 
+ // Posts should be newest first
+ posts.sort((a, b) => b.localeCompare(a))
+
  tree.push({
    path: outputDir,
-   posts,
+   posts: posts.map((post) => post.replace('.txt', '')),
    dirs: []
  })
 

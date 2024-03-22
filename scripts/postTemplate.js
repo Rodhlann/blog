@@ -1,6 +1,8 @@
 const fs = require('node:fs')
 const { headerFromTemplate } = require('./headerTemplate.js')
-const { INPUT_PATH, POSTS_PATH } = require('./constants.js')
+const { POSTS_PATH, INPUT_PATH } = require('./constants.js')
+const { log } = require('./util/logger.js')
+const { calculateRelativePathString } = require('./util/calculateRelativePathString.js')
 
 const htmlFromTemplate = (header, content, fileName) => `<!DOCTYPE HTML>
 
@@ -22,19 +24,20 @@ const htmlFromTemplate = (header, content, fileName) => `<!DOCTYPE HTML>
     <section id="terminal">
       <article>
         <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;cat ${fileName}</div>
+        <div>$&nbsp;cat ${fileName}.txt</div>
         
 ${content}
 
         <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
       </article>
     </section>
   </body>
 </html>`
 
-const generatePostHtml = (rawText, fileName) => {
-  const headerContent = headerFromTemplate('../styles/terminal.css')
+const generatePostHtml = (rawText, fileName, path) => {
+  const relative = calculateRelativePathString(path)
+  const headerContent = headerFromTemplate(`${relative}styles/terminal.css`)
 
   const htmlContent = rawText.replaceAll('\r\n', '\n')
     .split('\n\n')
@@ -44,50 +47,30 @@ const generatePostHtml = (rawText, fileName) => {
   return htmlFromTemplate(headerContent, htmlContent, fileName)
 }
 
-function generatePosts(output, path = INPUT_PATH, dirName = '') {
-  try {
-    const readPath = `${path}/${dirName}`
-    
-    console.log(`[INFO] Reading posts from dir -`, readPath)
-    const contents = fs.readdirSync(readPath)
-
-    const [posts, dirs] = contents.reduce(([posts, dirs], file) => 
-      file.includes('.txt')
-      ? [[...posts, file], dirs]
-      : [posts, [...dirs, file]],
-    [[],[]])
-
-    console.log(`[INFO] Generating HTML posts from text posts`)
-    const generated = posts
-      .sort((a, b) => b.localeCompare(a))
-      .map((fileName) => {
-        const text = fs.readFileSync(`${readPath}/${fileName}`, 'utf8')
-        const generatedPost = generatePostHtml(text, fileName)
-        return {
-          name: fileName.split('.')[0],
-          html: generatedPost
-        }
-      })
-
-    const outputDirName =  `${POSTS_PATH}${dirName && `/${dirName}`}`
-    if (!fs.existsSync(outputDirName)){
-      console.log(`[INFO] Creating dir`, outputDirName)
-      fs.mkdirSync(outputDirName);
-    }
-    
-    console.log(`[INFO] Writing HTML posts to output dir`)
-    generated.forEach(({name, html}) => {
-      fs.writeFileSync(`${outputDirName}/${name}.html`, html)
+function generatePosts(path, posts) {
+  log.info('[INFO] Writing posts for', path)
+  const generated = posts
+    .map((name) => {
+      const postFileType = '.txt'
+      const fileName = name + postFileType
+      const inputPath = path.replace(POSTS_PATH, INPUT_PATH)
+      const text = fs.readFileSync(`${inputPath}/${fileName}`, 'utf8')
+      const generatedPost = generatePostHtml(text, fileName, path)
+      return {
+        name,
+        html: generatedPost
+      }
     })
 
-    dirs.forEach((name) => {
-      generatePosts(output, path, name)
-    });
-
-    output[outputDirName] = generated;
-  } catch (e) {
-    console.log(`[ERROR]`, e.message)
+  if (!fs.existsSync(path)){
+    log.info('Creating directory', path)
+    fs.mkdirSync(path);
   }
+  
+  generated.forEach(({name, html}) => {
+    log.info('[INFO] Writing post', path + name + '.html')
+    fs.writeFileSync(`${path}/${name}.html`, html)
+  })
 }
 
 module.exports = {

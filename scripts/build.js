@@ -1,3 +1,5 @@
+const fs = require('node:fs')
+
 const { INPUT_PATH, POSTS_PATH } = require('./constants.js')
 const { generate } = require('./generate.js')
 const { generateDirectoryTree } = require('./generateDirectoryTree.js')
@@ -9,6 +11,11 @@ function main() {
   try {
   // Read files and dirs from INPUT_PATH and generate output tree for POSTS_PATH
   const tree = generateDirectoryTree(INPUT_PATH, POSTS_PATH)
+
+  // Clean up posts dir
+  log.info('Cleaning up', POSTS_PATH)
+  fs.rmSync(POSTS_PATH, { recursive: true, force: true })
+  fs.mkdirSync(POSTS_PATH)
 
   // Generate all posts and related index pages
   generate(tree)

@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-03-22.txt.txt</div>
+        
+<p>[Fri Mar 22 2024]</p>
+<p>Took a quick detour from the A* algorithm workflow because
+I was feeling like the blog was quickly getting a little
+cluttered on the front page!</p>
+<p>I am thinking it might be nice to have the 5 or so latest
+posts on the front page, and then separate directories for
+various topics I want to write about. </p>
+<p>I completely rewrote my entire site build script, which was
+pretty fun! </p>
+<p>Previously I was sort of inlining the entire process,
+where I would get the text posts and then immediately write the
+correlated html document to the output dir. </p>
+<p>Now I am going out and building a directory tree which I can
+then iterate over to build the html documents and their index
+pages. This makes it way easier to maintain currently, or switch
+directions in the future, since all the posts live in an isolated
+data structure. </p>
+<p>Been having a really fun time with it! I'm sure I will keep iterating
+since this did introduce some awkward user flows...</p>
+<p>Like if I add more topics, how will people know which posts are related
+to what on the main blog page? How can I go about setting that up without
+having to manually move files around all the time???</p>
+<p>Exciting problems to have! </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>

@@ -1,8 +1,10 @@
 const fs = require('node:fs')
 const { headerFromTemplate } = require('./headerTemplate.js')
 const { log } = require('./util/logger.js')
+const { calculateRelativePathString } = require('./util/calculateRelativePathString.js')
+const { POSTS_PATH, HOME_URL } = require('./constants.js')
 
-const htmlFromTemplate = (header, content) => `<!DOCTYPE HTML>
+const htmlFromTemplate = (header, content, backLink) => `<!DOCTYPE HTML>
 
 <html>
   ${header}
@@ -27,7 +29,7 @@ const htmlFromTemplate = (header, content) => `<!DOCTYPE HTML>
 ${content}
 
         <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;<a href="../index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+        <div>$&nbsp;<a href="${backLink}">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
       </article>
     </section>
   </body>
@@ -37,21 +39,30 @@ ${content}
 
 const generateIndexHtml = (path, posts, dirs) => {
   const postLinks = posts
-    .map((name) => `<p>&nbsp;<a href="${path}/${name}.html">${name}.txt</a></p>`).join('\n')
+    .map((name) => `<p>&nbsp;<a href="./${name}.html">${name}.txt</a></p>`).join('\n')
 
   const dirLinks = dirs
     .map(({path}) => {
       const dirName = path.split('/').pop()
-      return `<p>&nbsp;<b><a href="${path}">${dirName}/</a></b></p>`
+      return `<p>&nbsp;<b><a href="./${dirName}/index.html">${dirName}/</a></b></p>`
     }).join('\n')
   
-  const subdirCount = path.split('/').length - 1
-  const subdirString = subdirCount === 0 ? '.' : [...Array(subdirCount)].reduce((acc, _) => acc += '../', '')
-  const headerContent = headerFromTemplate(`${subdirString}styles/terminal.css`)
+  const relative = calculateRelativePathString(path)
+  const headerContent = headerFromTemplate(`${relative}styles/terminal.css`)
+  const backLink = path === POSTS_PATH ? HOME_URL : '../index.html'
 
-  const htmlContent = htmlFromTemplate(headerContent, `${postLinks}\n${dirLinks}`)
+  const htmlContent = htmlFromTemplate(
+    headerContent, 
+    `${postLinks}\n${dirLinks}`,
+    backLink
+  )
 
-  log.info('[INFO] Writing index.html for', path)
+  if (!fs.existsSync(path)) {
+    log.info('Creating directory', path)
+    fs.mkdirSync(path)
+  }
+
+  log.info('Writing index.html for', path)
   fs.writeFileSync(`${path}/index.html`, htmlContent)
 }
 
