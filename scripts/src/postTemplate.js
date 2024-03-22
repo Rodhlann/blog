@@ -68,8 +68,9 @@ function generatePosts(path, posts) {
   }
   
   generated.forEach(({name, html}) => {
-    log.info('[INFO] Writing post', path + name + '.html')
-    fs.writeFileSync(`${path}/${name}.html`, html)
+    const fileName = `${path}/${name}.html`
+    log.info('[INFO] Writing post', fileName)
+    fs.writeFileSync(fileName, html)
   })
 }
 
