@@ -24,7 +24,7 @@ const htmlFromTemplate = (header, content, fileName) => `<!DOCTYPE HTML>
     <section id="terminal">
       <article>
         <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;cat ${fileName}.txt</div>
+        <div>$&nbsp;cat ${fileName}</div>
         
 ${content}
 

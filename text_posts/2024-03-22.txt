@@ -4,22 +4,22 @@ Took a quick detour from the A* algorithm workflow because
 I was feeling like the blog was quickly getting a little
 cluttered on the front page!
 
-I am thinking it might be nice to have the 5 or so latest
+I am thinking it might be nice to have the 5 or so of my latest
 posts on the front page, and then separate directories for
 various topics I want to write about. 
 
-I completely rewrote my entire site build script, which was
+So I completely rewrote my entire site build script, which was
 pretty fun! 
 
 Previously I was sort of inlining the entire process,
 where I would get the text posts and then immediately write the
-correlated html document to the output dir. 
+coinciding html document to the output dir. 
 
 Now I am going out and building a directory tree which I can
-then iterate over to build the html documents and their index
-pages. This makes it way easier to maintain currently, or switch
-directions in the future, since all the posts live in an isolated
-data structure. 
+iterate over to build the html documents and their index
+pages. This makes it way easier to maintain, and to switch
+directions in the future if I want, since all the posts now live 
+in an isolated data structure. 
 
 Been having a really fun time with it! I'm sure I will keep iterating
 since this did introduce some awkward user flows...
