@@ -1,30 +1,31 @@
 [Sun Mar 24 2024]
 
-Finally merged in the first major iteration of the A* Search Algorithm
-logic!!! Very exciting stuff.
+Well today was kind of a bust as far as coding goes!
 
-It's definitely not perfect though. Currently if you create a complex search
-path, like a pattern where the end point is inside of a room with a single
-entrance and the start point is against the far wall of the room, 
-it will freeze up and hang your browser. I put a warning for this up
-on the page in the mean time at least...
+I got super sidetracked randomly deciding to see if 
+I could figure out how to implement an RSS reader. 
+Why? I have no idea... I don't currently consume any
+RSS feeds, and I don't publish a feed myself, so I
+really can't say what drove me in that direction. 
 
-I believe that's a bug in the current code where it's re-searching
-already searched nodes. I'm not sure how else it would get stuck
-in an infinite loop... But I'm confident I can figure it out!
+Once that subsided I tried to go back and debug the
+A* logic, but I'm finding that there's several layers
+of issues there. 
 
-Despite the flaws it's still pretty cool! I've got it set up now so you
-can drag to place start and end points, as well as draw walls instead of
-having to individually click cells, and it all updates dynamically, 
-which feels much better. I also cleaned up the code a lot, which is one
-of my great joys. Still a ways to go there yet, ha!
+The one thing I did figure out was that there seems
+to be a compatibility issue between Chrome's 
+for...of implementation and Safari / Firefox, where
+the continue keyword doesn't work as expected. 
 
-Very excited to have made it this far with the logic, and I plan on 
-digging back in to it and maybe looking at some other implementations
-to figure out how I might improve on what I've got. 
+I was able to fix this by switching to a traditional
+for loop, but that only illuminated another major issue where
+for some reason in Chrome the algorithm appears to be
+working backwards??? Instead of finding the shortest
+possible path, it finds the longest! What!?
 
-I have no interest in cheating my way to the end though, so I'm hoping I 
-can at least get it in to an unbroken state before I start optimizing
-based off other people's code! 
+I have no idea why this is happening yet, but all of my
+attempts to resolve it were thwarted. 
 
-
+I guess every day can't be a winner! I think I'll probably
+take a breather from the A* stuff for a day or two and
+maybe try to get my home page looking a bit nicer.

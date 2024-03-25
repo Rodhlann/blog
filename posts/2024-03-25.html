@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-03-25.txt</div>
+        
+<p>[Sun Mar 24 2024]</p>
+<p>Well today was kind of a bust as far as coding goes!</p>
+<p>I got super sidetracked randomly deciding to see if 
+I could figure out how to implement an RSS reader. 
+Why? I have no idea... I don't currently consume any
+RSS feeds, and I don't publish a feed myself, so I
+really can't say what drove me in that direction. </p>
+<p>Once that subsided I tried to go back and debug the
+A* logic, but I'm finding that there's several layers
+of issues there. </p>
+<p>The one thing I did figure out was that there seems
+to be a compatibility issue between Chrome's 
+for...of implementation and Safari / Firefox, where
+the continue keyword doesn't work as expected. </p>
+<p>I was able to fix this by switching to a traditional
+for loop, but that only illuminated another major issue where
+for some reason in Chrome the algorithm appears to be
+working backwards??? Instead of finding the shortest
+possible path, it finds the longest! What!?</p>
+<p>I have no idea why this is happening yet, but all of my
+attempts to resolve it were thwarted. </p>
+<p>I guess every day can't be a winner! I think I'll probably
+take a breather from the A* stuff for a day or two and
+maybe try to get my home page looking a bit nicer.</p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>

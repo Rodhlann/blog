@@ -1,0 +1,30 @@
+[Sat Mar 23 2024]
+
+Finally merged in the first major iteration of the A* Search Algorithm
+logic!!! Very exciting stuff.
+
+It's definitely not perfect though. Currently if you create a complex search
+path, like a pattern where the end point is inside of a room with a single
+entrance and the start point is against the far wall of the room, 
+it will freeze up and hang your browser. I put a warning for this up
+on the page in the mean time at least...
+
+I believe that's a bug in the current code where it's re-searching
+already searched nodes. I'm not sure how else it would get stuck
+in an infinite loop... But I'm confident I can figure it out!
+
+Despite the flaws it's still pretty cool! I've got it set up now so you
+can drag to place start and end points, as well as draw walls instead of
+having to individually click cells, and it all updates dynamically, 
+which feels much better. I also cleaned up the code a lot, which is one
+of my great joys. Still a ways to go there yet, ha!
+
+Very excited to have made it this far with the logic, and I plan on 
+digging back in to it and maybe looking at some other implementations
+to figure out how I might improve on what I've got. 
+
+I have no interest in cheating my way to the end though, so I'm hoping I 
+can at least get it in to an unbroken state before I start optimizing
+based off other people's code! 
+
+
