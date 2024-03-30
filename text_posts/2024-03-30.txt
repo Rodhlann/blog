@@ -1,0 +1,45 @@
+[Sat Mar 30 2024]
+
+It's been a few days since I've posted! I have been
+pretty deep in the murk trying to figure out how
+to get that rss-feed idea I had mentioned working. 
+
+It's pretty cool! I'm using Typescript, which has been
+a bit painful to configure, but overall helpful. Rollup
+to build and bundle, which is pretty neat (also painful to configure
+because Typescript...). I am using a SQLite DB to store
+various RSS feeds I want to display, and then rendering
+them in a pretty standard feed UI using SSR, which I am currently
+building entirely from scratch instead of with Next or another framework. 
+And all the API routes to add and remove feeds are hidden behind the
+admin UI page.
+
+I've got the admin UI set up with an authentication 
+using FusionAuth locally to keep it
+protected from ??? strangers ??? who might stumble upon my 
+super tiny unimportant website! ... Honestly, I mostly did this part 
+as a learning project for stuff I'm doing at work, but it's 
+still cool and I did learn a ton. 
+
+It's been an incredible learning experience, from figuring
+out how RSS feeds work, to learning about authentication flows,
+and learning how to do SSR without framework assistance. 
+I'm feeling pretty accomplished and inquisitive!
+
+Now I just need to finish up the UI and then figure out how
+and where I want to host the dang thing. But I'm anticipating
+having it as another route on my website!
+
+Maybe I'll even set up an RSS feed for my blog so I can 
+pretend someone is hearing (reading?) my shouts in to void!!!
+
+Anyways, I'm hoping I'll get this to a good state soon
+so I can get back to the A* search algorithm. 
+
+I found this article about 
+<a href="https://romgrk.com/posts/optimizing-javascript">Optimizing JavaScript</a>
+that I am super excited to learn from for performance
+gains in that code. 
+
+Lots of inspiration these days! I hope I can keep riding this
+wave!!!
