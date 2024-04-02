@@ -1,0 +1,74 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-04-02.txt</div>
+        
+<p>[Tue Apr 02 2024]</p>
+<p>I've done it! Mostly! I've got my rss-reader project
+in to an almost deliverable state! </p>
+<p>I solved two major problems today: </p>
+<p>1. Handling both RSS spec and Atom spec 
+feeds. This was a lot of fun to code for, and I was
+glad to discover this little quirk about RSS readers.
+I had no idea!</p>
+<p>2. Figuring out how to give users the ability to
+expand and collapse collapsible feed sections. 
+This means that I can keep the UI in a pretty
+standardized minimal state, but give users
+the ability to read all the latest goodies from
+the various feeds!</p>
+<p>Really excited I was able to figure all of that out. 
+It's been a long time since I've really had to build
+something out from scratch, and getting to flex those
+muscles feels really good. </p>
+<p>Unfortunately a few major problems remain! </p>
+<p>In the process of fixing those two roadblocks, 
+I ended up breaking my Rollup build. It seems like
+the bundle isn't properly storing the public css 
+and js files, so the UI can't load. I'm sure that's
+something obvious I've just never had to deal with
+before, but it was an unexpected surprise! </p>
+<p>Secondly, I have collected all of these great RSS
+feeds during development, but it's looking like
+I might have to re-enter them manually in my prod
+instance. I don't really have a good way of getting
+at the feed urls I enter in to the DB currently, 
+perhaps I'll add another endpoint that just spits
+those out in a text format...</p>
+<p>I also still need to figure out where and how I will
+host this little project. I don't particularly want
+to pay to host it, and I don't have a good local server
+setup currently, so who knows how that'll end up. </p>
+<p>Wow! I've learned a ton these last few weeks. What
+a blast it has been! Can't wait to continue with 
+this and other projects that are knocking around in 
+my head. </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>
