@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-04-05.txt</div>
+        
+<p>[Fri Apr 05 2024]</p>
+<p>After a serious battle and an entire auth rewrite
+I've finally got my little rss-reader web app deployed!</p>
+<p>I ended up going through several tools trying to figure
+out how to deploy the dang thing without breaking the 
+bank, and have currently landed on Render as the platform
+of choice. I was really trying to get GCP working, but
+it is just so heavy without really any additional benefit
+to me for my hobby projects. </p>
+<p>I think it'd be cool to have some parity between my home
+projects and the technology I'm using at work, but it was
+just such a pain!! It would start my app build and just hang
+indefinitely. There's no clear build logs or anything, from
+what I could tell, so it's just a black box. No thanks. </p>
+<p>Though, if anyone happens to see this and knows why my Dockerfile might
+not have been getting accepted by GCP feel free to open an issue
+with your ideas on the rss-reader repo. It's very possible I
+was missing something obvious. </p>
+<p>This same can be said for FusionAuth. I ended up switching to Auth0
+because they make it super easy (and free) to set up a small project,
+and I have no way currently to self-host the FusionAuth docker setup.
+Using their pre-built products in AWS or whatever was pretty pricey
+too... Kind of a bummer, because I like the way they have their entry
+level auth setup more tbh. </p>
+<p>Anyways, this is the first time I've deployed a web application
+completely solo and from scratch! Pretty exciting stuff!</p>
+<p>I think there's a lot to learn yet, and I feel like I could
+probably get more out of other existing services, but right
+now I'm just trying to get things figured without spending
+a bunch of money on something where I will likely be the only
+user. </p>
+<p>I think once I'm done checking off the final things I want to tackle 
+for this project, I'll probably try and set up an RSS feed for my
+blog.</p>
+<p>And then back to the A* search algorithm! For real this time! </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>
