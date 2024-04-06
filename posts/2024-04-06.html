@@ -1,0 +1,68 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-04-06.txt</div>
+        
+<p>[Sat Apr 06 2024]</p>
+<p>I've finally got the RSS reader deployed and linked
+on my timpepper.dev home page! </p>
+<p>Very excited to have finally figured out all the odds
+and ends for getting it hosted. It was quite the journey!</p>
+<p>I ended up having to rewrite both of my Auth and DB 
+setups, which was unexpected and a little frustrating. 
+If I end up liking this reader and wanting to continue
+using it I'll probably end up trying again to host it
+on either GCP or AWS for free or a small monthly fee. </p>
+<p>That would give me a lot more flexibility to host it and
+build it out exactly how I want. I really just didn't
+want to spend any money on the initial version.</p>
+<p>Render is cool, but their non-free tiers immediately jump
+up to $7+/mo, and I just can't imagine this little app
+would cost that much to run. It's basically a static
+page, a small DB and cache, and then some networking
+to go out and get the actual RSS feeds. Very light
+stuff. </p>
+<p>It's also hard to swallow the idea of paying streaming
+service prices for something so little! </p>
+<p>My biggest gripe right now is that it doesn't seem like there's going to be
+a good way for me to actually host the RSS reader at a 
+route on my website, as of now. In order to do a reverse proxy I'd
+need to be actually hosting my website as a web server somewhere
+instead of statically hosting it through Github Pages. </p>
+<p>I might be able to set up my website DNS to point to the website
+though? Maybe I could have like a rss-reader.timpepper.dev
+page or something like that...</p>
+<p>Either, way I'm glad to have a minimum viable product sort
+of thing out there! I put a lot of work in to it and learned
+a ton along the way. I'm hopeful I'll find it useful, and it
+will be neat to share the RSS feeds I like with whoever
+happens to stumble upon my website! </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>
