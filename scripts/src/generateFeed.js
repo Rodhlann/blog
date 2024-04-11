@@ -55,7 +55,7 @@ const generateFeed = (tree) => {
   const feed = `<?xml version="1.0"?>
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <atom:link href="https://timpepper.dev/blog/feed/rss.xml" rel="self" type="application/rss+xml" />
+      <atom:link href="https://timpepper.dev/blog/posts/feed/rss.xml" rel="self" type="application/rss+xml" />
       <title>timpepper.dev blog</title>
       <link>https://timpepper.dev/blog</link>
       <description>The RSS feed for the timpepper.dev blog</description>
