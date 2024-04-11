@@ -1,0 +1,37 @@
+[Wed Apr 10 2024]
+
+Been taking a minor break from the rss reader app development
+while I think about where I want to go with it next. 
+
+I have been pretty unhappy with the UX provided by
+the Render free tier, and am not excited about the
+idea of jumping immediately to $7+/mo payments to 
+keep it alive. I have around 90 days to figure it out,
+but I'm really thinking about buying a micro computer
+to host some of these little projects I've been working
+on instead of spending that money on cloud hosting. 
+
+There's still a bunch of UI improvements I've been tossing
+around, and I've even got some nearly completed. I think
+it'll be pretty important to have category filtering in place
+since the list UI is going to get pretty out of hand
+as I continue to add new feeds. 
+
+I'd also like a way for users to decide how long into
+the past they'd like to see feed content. Day, week, month, etc. 
+And some more in-depth options around how 
+the content is actually laid out, whether it be by feed, 
+as it currently is, or chronologically with the newest
+posts first, or something. 
+
+Definitely a lot of different options there! 
+
+In the interim, while I'm still trying to figure all that out, I've
+gone ahead and implemented my own RSS feed for this blog! Nothing
+too exciting there, but I figure that pretty much closes
+the loop on all this work I've been doing. 
+
+I guess I'm hopeful that someone might stumble upon my
+little website and find my efforts engaging in some way.  
+Unlikely, I know, but at the very least it's another new thing 
+I learned!

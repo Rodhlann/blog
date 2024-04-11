@@ -7,6 +7,7 @@ const CODE_PATH = `${POSTS_PATH}/code`
 const BREAD_PATH = `${POSTS_PATH}/bread`
 
 const HOME_URL = 'https://timpepper.dev'
+const BLOG_URL = `${HOME_URL}/blog`
 
 module.exports = {
   ROOT_PATH,
@@ -14,5 +15,6 @@ module.exports = {
   POSTS_PATH,
   CODE_PATH,
   BREAD_PATH,
-  HOME_URL
+  HOME_URL,
+  BLOG_URL
 }

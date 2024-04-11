@@ -1,0 +1,64 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-04-10.txt</div>
+        
+<p>[Wed Apr 10 2024]</p>
+<p>Been taking a minor break from the rss reader app development
+while I think about where I want to go with it next. </p>
+<p>I have been pretty unhappy with the UX provided by
+the Render free tier, and am not excited about the
+idea of jumping immediately to $7+/mo payments to 
+keep it alive. I have around 90 days to figure it out,
+but I'm really thinking about buying a micro computer
+to host some of these little projects I've been working
+on instead of spending that money on cloud hosting. </p>
+<p>There's still a bunch of UI improvements I've been tossing
+around, and I've even got some nearly completed. I think
+it'll be pretty important to have category filtering in place
+since the list UI is going to get pretty out of hand
+as I continue to add new feeds. </p>
+<p>I'd also like a way for users to decide how long into
+the past they'd like to see feed content. Day, week, month, etc. 
+And some more in-depth options around how 
+the content is actually laid out, whether it be by feed, 
+as it currently is, or chronologically with the newest
+posts first, or something. </p>
+<p>Definitely a lot of different options there! </p>
+<p>In the interim, while I'm still trying to figure all that out, I've
+gone ahead and implemented my own RSS feed for this blog! Nothing
+too exciting there, but I figure that pretty much closes
+the loop on all this work I've been doing. </p>
+<p>I guess I'm hopeful that someone might stumble upon my
+little website and find my efforts engaging in some way.  
+Unlikely, I know, but at the very least it's another new thing 
+I learned!</p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>
