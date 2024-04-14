@@ -5,9 +5,9 @@ html {
   font-family: "Lucida Console", Monaco, monospace;
   font-size: 16px;
   line-height: 19px;
-  letter-spacing: .02rem;
+  letter-spacing: 0.02rem;
 }
-  
+
 body {
   color: yellow;
   border: 0px;
@@ -30,16 +30,38 @@ p {
 header {
   font-family: Verdana, Geneva, sans-serif;
   font-size: 18px;
-  display: flex;
   align-items: center;
   justify-content: center;
   height: 35px;
+  min-height: 35px;
+  max-height: 35px;
   color: black;
   background-color: rgba(255, 255, 255, 0.3);
   border: solid rgba(255, 255, 255, 0.384) 1px;
   border-bottom: 0px;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+
+  display: grid;
+  grid-template-columns: 1fr 6fr 1fr;
+  padding: 0 5px;
+}
+
+.header-text {
+  grid-column: 2;
+  text-align: center;
+}
+
+.rss-link-wrapper {
+  display: flex;
+  justify-self: flex-end;
+  justify-content: flex-end;
+  width: 23px;
+}
+
+.rss-icon {
+  display: block;
+  max-width: 100%;
 }
 
 article {
@@ -65,8 +87,12 @@ section {
 }
 
 @keyframes toggle {
-  from { opacity: 1; }
-  to { opacity: 0; }
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
 
 #cursor {
@@ -91,6 +117,10 @@ section {
   header {
     font-size: 22px;
     height: 40px;
+    min-height: 40px;
+    max-height: 40px;
+  }
+  .rss-link-wrapper {
+    width: 25px;
   }
 }
-

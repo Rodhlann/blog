@@ -1,13 +1,13 @@
 const fs = require('node:fs')
-const { headerFromTemplate } = require('./headerTemplate.js')
+const { headBlockFromTemplate, headerFromTemplate } = require('./headerTemplate.js')
 const { log } = require('../util/logger.js')
 const { calculateRelativePathString } = require('../util/calculateRelativePathString.js')
 const { POSTS_PATH, HOME_URL } = require('./constants.js')
 
-const htmlFromTemplate = (header, content, backLink) => `<!DOCTYPE HTML>
+const htmlFromTemplate = (headBlock, header, content, backLink) => `<!DOCTYPE HTML>
 
 <html>
-  ${header}
+  ${headBlock}
 
   <script>
     function setDate() {
@@ -17,9 +17,7 @@ const htmlFromTemplate = (header, content, backLink) => `<!DOCTYPE HTML>
   </script>
 
   <body onload="setDate()">
-    <header>
-      <div>~/timpepper.dev/blog</div>
-    </header>
+    ${header}
 
     <section id="terminal">
       <article>
@@ -48,13 +46,16 @@ const generateIndexHtml = (path, posts, dirs) => {
     }).join('\n')
   
   const relative = calculateRelativePathString(path)
-  const headerContent = headerFromTemplate(`${relative}styles/terminal.css`)
+  const headBlockContent = headBlockFromTemplate(`${relative}styles/terminal.css`)
+  const headerContent = headerFromTemplate(relative)
   const backLink = path === POSTS_PATH ? HOME_URL : '../index.html'
 
   const htmlContent = htmlFromTemplate(
-    headerContent, 
+    headBlockContent, 
+    headerContent,
     `${postLinks}\n${dirLinks}`,
-    backLink
+    backLink,
+    relative
   )
 
   if (!fs.existsSync(path)) {

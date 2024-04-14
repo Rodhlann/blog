@@ -1,13 +1,13 @@
 const fs = require('node:fs')
-const { headerFromTemplate } = require('./headerTemplate.js')
+const { headerFromTemplate, headBlockFromTemplate } = require('./headerTemplate.js')
 const { POSTS_PATH, INPUT_PATH } = require('./constants.js')
 const { log } = require('../util/logger.js')
 const { calculateRelativePathString } = require('../util/calculateRelativePathString.js')
 
-const htmlFromTemplate = (header, content, fileName) => `<!DOCTYPE HTML>
+const htmlFromTemplate = (headBlock, header, content, fileName) => `<!DOCTYPE HTML>
 
 <html>
-  ${header}
+  ${headBlock}
 
   <script>
     function setDate() {
@@ -17,9 +17,7 @@ const htmlFromTemplate = (header, content, fileName) => `<!DOCTYPE HTML>
   </script>
 
   <body onload="setDate()">
-    <header>
-      <div>~/timpepper.dev/blog</div>
-    </header>
+    ${header}
 
     <section id="terminal">
       <article>
@@ -37,14 +35,15 @@ ${content}
 
 const generatePostHtml = (rawText, fileName, path) => {
   const relative = calculateRelativePathString(path)
-  const headerContent = headerFromTemplate(`${relative}styles/terminal.css`)
+  const headBlockContent = headBlockFromTemplate(`${relative}styles/terminal.css`)
+  const headerContent = headerFromTemplate(relative)
 
   const htmlContent = rawText.replaceAll('\r\n', '\n')
     .split('\n\n')
     .filter(Boolean)
     .map((section) => `<p>${section}</p>`).join('\n')
 
-  return htmlFromTemplate(headerContent, htmlContent, fileName)
+  return htmlFromTemplate(headBlockContent, headerContent, htmlContent, fileName)
 }
 
 function generatePosts(path, posts) {
