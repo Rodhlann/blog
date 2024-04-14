@@ -9,7 +9,7 @@ const headerFromTemplate = (relativePath) => `<header>
   <div class="header-text">~/timpepper.dev/blog</div>
     <div class="rss-link-wrapper">
       <a class="rss-link" href="https://timpepper.dev/blog/posts/feed/rss.xml">
-        <img class="rss-icon" src="${relativePath}images/rss.png" alt="RSS Feed Logo">
+        <img class="rss-icon" src="${relativePath}images/rss-small.png" alt="RSS Feed Logo">
       </a>
     </div>
   </header>`
