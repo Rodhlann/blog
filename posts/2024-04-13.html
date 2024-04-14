@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+      <div>~/timpepper.dev/blog</div>
+    </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-04-13.txt</div>
+        
+<p>[Sat Apr 13 2024]</p>
+<p>I have finally got the category filtering merged
+for the RSS reader! I took a few days off from working
+on it due to exhaustion and a desire to avoid getting
+burnt out, but was able to knock it out pretty quickly
+today. </p>
+<p>I tackled 4 relatively major issues with this latest release:</p>
+<p>1. Filtering by category</p>
+<p>I was getting pretty overwhelmed seeing all these RSS
+feeds on the front page of the RSS reader with no way
+to filter them down. The Verge especially puts out a ton
+of content, constantly, and a lot of it I don't actually
+care about. </p>
+<p>I've also been really wanting a way to categorize
+the different feeds I am following, so I was feeding two
+birds with one scone here, I think!</p>
+<p>My initial solution for this is just to hard code a few
+categories I know I am interested in, and start filling
+them out with various related feeds. I can already tell
+I am going to want a way to edit feed categories and add
+new ones in the future though! Always more work to do. </p>
+<p>I ended up creating a custom checkbox UI selector for 
+the category filtering, since the default checkboxes are pretty ugly, 
+and I've never really had the opportunity to build out custom 
+element styles to this degree. </p>
+<p>I am pretty happy with how the filter UI looks and operates,
+and I was happy to have the browser accessibility tools
+to help me get them working right for everyone.</p>
+<p>2. Database update</p>
+<p>I updated the db to accept an enum type for the categories. 
+Honestly, I was expecting this to be a little easier than it
+was. Both SQLite and Postgres handle enums completely differently,
+and I ended up wrestling with them both, which isn't a surprise
+given I didn't read the docs at first. What was I thinking?</p>
+<p>3. CSS snapping</p>
+<p>I had noticed that on Firefox when the page would load 
+the default browser styles would appear before my custom styles 
+would load. This is called Flash of Unstyled Content (FOUC)
+and is apparently pretty common with imported css styles.</p>
+<p>It was a minor annoyance, but I had read a blog
+post recently about <a href="https://strikingloo.github.io/inlining-css">The Unreasonable Effectiveness of Inlining CSS</a>
+and wanted to see if that would help. It's night and day! No
+more FOUC at all on any of the browsers I tested, desktop
+or mobile! 🙏🏻</p>
+<p>4. Chrome Lighthouse reporting</p>
+<p>Running the Lighthouse reporting tool in the Chrome dev tools
+revealed several issues I had introduced, or just missed,
+when setting up my site. </p>
+<p>I was missing a title element, as well as some meta tags,
+which would help with SEO, if that's ever something I actually care about. </p>
+<p>But more importantly, it helped me refine the accessibility 
+of the custom filter selector I made! I have some previous work experience
+with aria tags and screen readers, but it's all very general
+knowledge, and not very solid at that. </p>
+<p>The Lighthouse tool let me know that the label elements I'm using for the filter selector
+needed to be interactive via the tab and enter keys, and also directed me on
+how to set up the tabindex attributes properly to make sure everything is working
+well with screen readers. Very excited to have scored a 100 for accessibility,
+at least by Chrome's standards! </p>
+<p>That's a lot of stuff! It didn't really seem like it until 
+I started writing it out, but I am feeling pretty accomplished
+in retrospect!</p>
+<p>I think I will be putting this project on the shelf for a little
+while. I really want to finish up my A* search algorithm
+work, and I have big plans to learn some Rust next! </p>
+<p>Very excited for whatever's next! I'll keep you posted once I've
+figured it out for myself...</p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>

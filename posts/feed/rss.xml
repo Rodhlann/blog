@@ -6,8 +6,18 @@
       <link>https://timpepper.dev/blog</link>
       <description>The RSS feed for the timpepper.dev blog</description>
       <language>en-us</language>
-      <lastBuildDate>Thu, 11 Apr 2024 02:59:11 GMT</lastBuildDate>
+      <lastBuildDate>Sun, 14 Apr 2024 02:09:40 GMT</lastBuildDate>
       <generator>timpepper.dev static site generator</generator>
+      <item>
+        <title>Sat Apr 13 2024</title>
+        <link>https://timpepper.dev/blog/posts/2024-04-13.html</link>
+        <guid>https://timpepper.dev/blog/posts/2024-04-13.html</guid>
+        <description>I have finally got the category filtering merged
+for the RSS reader! I took a few days off from working
+on it due to exhaustion and a desire to avoid...</description>
+        <category>coding</category>
+        <pubDate>Sat, 13 Apr 2024 04:00:00 GMT</pubDate>
+      </item>
       <item>
         <title>Wed Apr 10 2024</title>
         <link>https://timpepper.dev/blog/posts/2024-04-10.html</link>
@@ -44,17 +54,17 @@ I've finally got my little rss-reader web app deployed! I ended up going through
 in to an almost deliverable state!  I solved two major problems today:  1. Handling both RSS spec...</description>
         <category>coding</category>
         <pubDate>Tue, 02 Apr 2024 04:00:00 GMT</pubDate>
-      </item>
-      <item>
+      </item><item>
         <title>Sat Mar 30 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-03-30.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-03-30.html</guid>
+        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-30.html</link>
+        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-30.html</guid>
         <description>It's been a few days since I've posted! I have been
 pretty deep in the murk trying to figure out how
 to get that rss-feed idea I had mentioned working...</description>
         <category>coding</category>
         <pubDate>Sat, 30 Mar 2024 04:00:00 GMT</pubDate>
-      </item><item>
+      </item>
+      <item>
         <title>Sun Mar 24 2024</title>
         <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-24.html</link>
         <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-24.html</guid>
