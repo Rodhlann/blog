@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+  <div class="header-text">~/timpepper.dev/blog</div>
+    <div class="rss-link-wrapper">
+      <a class="rss-link" href="https://timpepper.dev/blog/posts/feed/rss.xml">
+        <img class="rss-icon" src="../images/rss-vector.png" alt="RSS Feed Logo">
+      </a>
+    </div>
+  </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat 2024-04-14.txt</div>
+        
+<p>[Sun Apr 14 2024]</p>
+<p>Ended up starting my Rust journey this weekend! 
+(I know... I keep saying I am going to working on the A*
+project and then getting distracted... I'll get to it!)</p>
+<p>I worked through <a href="https://tourofrust.com">https://tourofrust.com</a>
+over a few hours, which was super helpful and a much better ease-in to
+Rust than the official docs, I think. And then started the 
+official <a href="https://doc.rust-lang.org/rust-by-example/">Rust By Example</a>
+guide! It's been pretty productive, and I'm hopeful I'll make
+it through the guide and official Book over the next few weeks. </p>
+<p>I also spent today tracking down a bunch of Ocean related
+RSS feeds, and fixing the minor issues that came up in my 
+rss-reader code alongside those new feeds. I was really 
+happy to see that my logging was helpful! And I've improved
+it even further now for future hiccups. </p>
+<p>The book I'm reading, <a href="https://www.goodreads.com/en/book/show/63241875>The Underworld by Susan Casey</a>,
+has been leaving a very strong impression on me, and I'm super
+interested in learning more about Deep Sea Exploration and 
+Ocean Conservation topics! All very exciting and interesting stuff!
+It's been really fun finding all the good blogs, and their associated
+feeds, and I can't wait to learn more!</p>
+<p>Last thing: I've added an RSS link to the blog header! that
+took a pretty long time because I was picky about how the 
+link icon looked, but I'm excited to advertise my RSS feed,
+even if no one sees it! It seems like finding feeds is kind
+of a pain these days, so it's cool to have a link front and center. </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+[Sun Apr 14 2024]
+
+Ended up starting my Rust journey this weekend! 
+(I know... I keep saying I am going to working on the A*
+project and then getting distracted... I'll get to it!)
+
+I worked through <a href="https://tourofrust.com">https://tourofrust.com</a>
+over a few hours, which was super helpful and a much better ease-in to
+Rust than the official docs, I think. And then started the 
+official <a href="https://doc.rust-lang.org/rust-by-example/">Rust By Example</a>
+guide! It's been pretty productive, and I'm hopeful I'll make
+it through the guide and official Book over the next few weeks. 
+
+I also spent today tracking down a bunch of Ocean related
+RSS feeds, and fixing the minor issues that came up in my 
+rss-reader code alongside those new feeds. I was really 
+happy to see that my logging was helpful! And I've improved
+it even further now for future hiccups. 
+
+The book I'm reading, <a href="https://www.goodreads.com/en/book/show/63241875>The Underworld by Susan Casey</a>,
+has been leaving a very strong impression on me, and I'm super
+interested in learning more about Deep Sea Exploration and 
+Ocean Conservation topics! All very exciting and interesting stuff!
+It's been really fun finding all the good blogs, and their associated
+feeds, and I can't wait to learn more!
+
+Last thing: I've added an RSS link to the blog header! that
+took a pretty long time because I was picky about how the 
+link icon looked, but I'm excited to advertise my RSS feed,
+even if no one sees it! It seems like finding feeds is kind
+of a pain these days, so it's cool to have a link front and center. 
+
