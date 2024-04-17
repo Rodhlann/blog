@@ -1,0 +1,43 @@
+[Tue Apr 16 2024]
+
+Over the last several days I've been noticing
+an issue loading certain feeds in the rss-reader.
+
+It appears that feeds that are served as the contents
+of a directory, rather than the actual file 
+itself, regularly, but not always, fail to resolve in the fetch. 
+This was perplexing, especially since I couldn't seem
+to reproduce the issue locally, but it felt like I was
+going to need to implement a retry strategy for 
+feed fetching if I wanted to resolve the issue. 
+
+So that's what I did! I completely refactored the
+feed fetch logic so I could modularize the actual
+fetch and the rss-to-json parsing, which were
+previously coupled together. This gave me the 
+flexibility to build out the feed fetch retry. 
+
+Now in the event of a failure the service will retry, up 
+to 5 times, to get the RSS feeds. If not it will
+carry on as it had previously, logging and ignoring
+the failure. 
+
+I was able to immediately test this upon merging
+in to the main branch, and it seems to be working
+great!! I am pretty psyched that the code was 
+easy enough to break apart and iterate on. I am
+pretty proud of myself for not writing a ball of 
+mud (yet...). 
+
+In other news, I'm slowly making my way through
+the Rust docs, and enjoying it very much. It's a
+lot to take in! I have very little experience
+with C, and next to none with C++, so this is really
+my first dive in to lower level languages. Having
+to think about memory allocation is completely 
+new to me, especially, and as much as they are
+easing me in I still feel pretty overwhelmed!
+
+It's very exciting! Learning something new, that is...
+I'm hopeful I will be able to build a small project
+myself here soon. 
