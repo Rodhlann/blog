@@ -1,0 +1,64 @@
+[Tue Apr 23 2024]
+
+I've just completed my first Rust project!!!
+
+When I go out to learn a new programming language
+my first goal is always to learn enough to build
+a game of Snake. I find that this covers a lot
+of different facets of a language, and is helpful
+for wrapping my head around the various quirks 
+presented by each one. 
+
+This time the hardest thing to figure out was I/O. 
+
+Formatting the output I wanted to print to the
+terminal wasn't too crazy, but pairing that with 
+user input was a bit of a beast. 
+
+I started out wanting to only use the standard
+rust modules to build the project, since building
+everything myself tends to be the most bang for my
+buck in learning how things work. Unfortunately, 
+I ended up having to use the crossterm crate to 
+get me to the finish line. 
+
+This library is a terminal interface helper that
+provides all sorts of functions for reading input
+and writing (and overwriting) the screen. 
+
+When I first introduced it to my code it completely
+hosed my output. Because I wasn't using carriage returns
+everything was printing out in this stair step format
+on every new line. Once I introduced the carriage 
+returns everything printed fine, but I still had
+to figure out user input. 
+
+Because this is a real-time game I needed to make
+sure the user input wasn't blocking. This was a 
+challenge because the crossterm documentation 
+isn't particularly helpful in letting you know
+how to utilize it's functions, and, probably more so,
+because I don't know what I'm doing... Fortunately
+crossterm provides a non-blocking poll() function that allows
+you to check for input events from the user, which I 
+could then use to change the snake's direction. 
+
+Once I got I/O figured the rest was a breeze. Rust's
+strict and verbose compiler, as well as VSCode's 
+Rust extensions, make it super easy to figure out 
+what's wrong with your code, and how to fix it. I 
+have been very impressed with the ease in which I 
+have been able to iterate on my code, even when
+daunted by references and borrowing. 
+
+I went ahead and requested a code review on 
+Mastodon... so we'll see if that turns up any assistance. 
+As far as I know I don't know any Rust developers 
+(Rustaceans?) in real life, so I am relying on the 
+internet to help me improve.
+
+In other news, I finally set up a basic home page 
+at timpepper.dev. It has a little blurb about me, 
+links to my current projects, and some contact info. 
+
+Feel free to reach out, if you're reading this! 
