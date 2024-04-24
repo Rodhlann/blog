@@ -1,0 +1,33 @@
+[Wed Apr 24 2024]
+
+Knocked out another rust project! This time I 
+implemented the A* search algorithm with rust, which
+is good news for my other A* search project!
+
+I am trying to decide now whether I want to 
+refactor the current JS code, which is pretty buggy,
+or to try and figure out how to get my rust
+implementation building as WASM. 
+
+It might be worth doing both, and then comparing the
+results!!
+
+I'm certainly impressed with how quickly I can iterate
+on my rust code. I'm experience some compiler headaches,
+but once I've got those working the program is fast
+and typically does what I expect it to do (assuming I 
+don't make any programming errors!!). 
+
+The rust community I have been exposed to is also very 
+friendly and helpful, and it gives me hope that I can 
+continue to learn the language with some support, 
+instead of in isolation. 
+
+I am excited to see what other stuff I can get up to 
+with this new tool on my belt! I think I'd like 
+to try and build a web server next, but I think I'll 
+try and get to the end of rust's Book first, since
+that's the final project in there. 
+
+It's awesome to feel hyped on coding!! What a cool 
+thing. 
