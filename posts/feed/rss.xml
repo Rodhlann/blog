@@ -6,8 +6,18 @@
       <link>https://timpepper.dev/blog</link>
       <description>The RSS feed for the timpepper.dev blog</description>
       <language>en-us</language>
-      <lastBuildDate>Wed, 24 Apr 2024 21:09:15 GMT</lastBuildDate>
+      <lastBuildDate>Mon, 29 Apr 2024 03:29:50 GMT</lastBuildDate>
       <generator>timpepper.dev static site generator</generator>
+      <item>
+        <title>Sun Apr 28 2024</title>
+        <link>https://timpepper.dev/blog/posts/2024-04-28.html</link>
+        <guid>https://timpepper.dev/blog/posts/2024-04-28.html</guid>
+        <description>Using my Rust A* Search Algorithm implementation as reference
+I was able to significantly improve search times 
+in my JavaScript implementation!!  I e...</description>
+        <category>coding</category>
+        <pubDate>Sun, 28 Apr 2024 04:00:00 GMT</pubDate>
+      </item>
       <item>
         <title>Wed Apr 24 2024</title>
         <link>https://timpepper.dev/blog/posts/2024-04-24.html</link>
@@ -46,17 +56,17 @@ an issue loading certain feeds in the rss-reader. It appears that feeds that are
 project and then getting distracted... I'll...</description>
         <category>coding</category>
         <pubDate>Sun, 14 Apr 2024 04:00:00 GMT</pubDate>
-      </item>
-      <item>
+      </item><item>
         <title>Sat Apr 13 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-04-13.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-04-13.html</guid>
+        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-13.html</link>
+        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-13.html</guid>
         <description>I have finally got the category filtering merged
 for the RSS reader! I took a few days off from working
 on it due to exhaustion and a desire to avoid...</description>
         <category>coding</category>
         <pubDate>Sat, 13 Apr 2024 04:00:00 GMT</pubDate>
-      </item><item>
+      </item>
+      <item>
         <title>Wed Apr 10 2024</title>
         <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-10.html</link>
         <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-10.html</guid>
