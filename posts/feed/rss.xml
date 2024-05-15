@@ -6,8 +6,18 @@
       <link>https://timpepper.dev/blog</link>
       <description>The RSS feed for the timpepper.dev blog</description>
       <language>en-us</language>
-      <lastBuildDate>Mon, 29 Apr 2024 03:29:50 GMT</lastBuildDate>
+      <lastBuildDate>Wed, 15 May 2024 02:17:58 GMT</lastBuildDate>
       <generator>timpepper.dev static site generator</generator>
+      <item>
+        <title>Tue May 14 2024</title>
+        <link>https://timpepper.dev/blog/posts/2024-05-14.html</link>
+        <guid>https://timpepper.dev/blog/posts/2024-05-14.html</guid>
+        <description>It's been a bit! Took a quick trip to San Francisco
+to check out the area and I didn't bring my laptop or 
+anything. A nice break from the chaos! Time...</description>
+        <category>coding</category>
+        <pubDate>Tue, 14 May 2024 04:00:00 GMT</pubDate>
+      </item>
       <item>
         <title>Sun Apr 28 2024</title>
         <link>https://timpepper.dev/blog/posts/2024-04-28.html</link>
@@ -46,17 +56,17 @@ a game...</description>
 an issue loading certain feeds in the rss-reader. It appears that feeds that are served as the contents...</description>
         <category>coding</category>
         <pubDate>Tue, 16 Apr 2024 04:00:00 GMT</pubDate>
-      </item>
-      <item>
+      </item><item>
         <title>Sun Apr 14 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-04-14.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-04-14.html</guid>
+        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-14.html</link>
+        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-14.html</guid>
         <description>Ended up starting my Rust journey this weekend! 
 (I know... I keep saying I am going to working on the A*
 project and then getting distracted... I'll...</description>
         <category>coding</category>
         <pubDate>Sun, 14 Apr 2024 04:00:00 GMT</pubDate>
-      </item><item>
+      </item>
+      <item>
         <title>Sat Apr 13 2024</title>
         <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-13.html</link>
         <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-13.html</guid>
