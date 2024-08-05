@@ -6,8 +6,18 @@
       <link>https://timpepper.dev/blog</link>
       <description>The RSS feed for the timpepper.dev blog</description>
       <language>en-us</language>
-      <lastBuildDate>Wed, 15 May 2024 02:17:58 GMT</lastBuildDate>
+      <lastBuildDate>Mon, 05 Aug 2024 05:32:38 GMT</lastBuildDate>
       <generator>timpepper.dev static site generator</generator>
+      <item>
+        <title>Sun Aug 04 2024</title>
+        <link>https://timpepper.dev/blog/posts/2024-08-04.html</link>
+        <guid>https://timpepper.dev/blog/posts/2024-08-04.html</guid>
+        <description>Wow! it's somehow been 3 months since my last update! 
+In that time I have moved cross-country to the San Francisco area, 
+as hinted at in my previous...</description>
+        <category>coding</category>
+        <pubDate>Sun, 04 Aug 2024 07:00:00 GMT</pubDate>
+      </item>
       <item>
         <title>Tue May 14 2024</title>
         <link>https://timpepper.dev/blog/posts/2024-05-14.html</link>
@@ -16,7 +26,7 @@
 to check out the area and I didn't bring my laptop or 
 anything. A nice break from the chaos! Time...</description>
         <category>coding</category>
-        <pubDate>Tue, 14 May 2024 04:00:00 GMT</pubDate>
+        <pubDate>Tue, 14 May 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Sun Apr 28 2024</title>
@@ -26,7 +36,7 @@ anything. A nice break from the chaos! Time...</description>
 I was able to significantly improve search times 
 in my JavaScript implementation!!  I e...</description>
         <category>coding</category>
-        <pubDate>Sun, 28 Apr 2024 04:00:00 GMT</pubDate>
+        <pubDate>Sun, 28 Apr 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Wed Apr 24 2024</title>
@@ -36,7 +46,7 @@ in my JavaScript implementation!!  I e...</description>
 implemented the A* search algorithm with rust, which
 is good news for my other A* search project! I am...</description>
         <category>coding</category>
-        <pubDate>Wed, 24 Apr 2024 04:00:00 GMT</pubDate>
+        <pubDate>Wed, 24 Apr 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Tue Apr 23 2024</title>
@@ -46,17 +56,17 @@ is good news for my other A* search project! I am...</description>
 my first goal is always to learn enough to build
 a game...</description>
         <category>coding</category>
-        <pubDate>Tue, 23 Apr 2024 04:00:00 GMT</pubDate>
-      </item>
-      <item>
+        <pubDate>Tue, 23 Apr 2024 07:00:00 GMT</pubDate>
+      </item><item>
         <title>Tue Apr 16 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-04-16.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-04-16.html</guid>
+        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-16.html</link>
+        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-16.html</guid>
         <description>Over the last several days I've been noticing
 an issue loading certain feeds in the rss-reader. It appears that feeds that are served as the contents...</description>
         <category>coding</category>
-        <pubDate>Tue, 16 Apr 2024 04:00:00 GMT</pubDate>
-      </item><item>
+        <pubDate>Tue, 16 Apr 2024 07:00:00 GMT</pubDate>
+      </item>
+      <item>
         <title>Sun Apr 14 2024</title>
         <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-14.html</link>
         <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-14.html</guid>
@@ -64,7 +74,7 @@ an issue loading certain feeds in the rss-reader. It appears that feeds that are
 (I know... I keep saying I am going to working on the A*
 project and then getting distracted... I'll...</description>
         <category>coding</category>
-        <pubDate>Sun, 14 Apr 2024 04:00:00 GMT</pubDate>
+        <pubDate>Sun, 14 Apr 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Sat Apr 13 2024</title>
@@ -74,7 +84,7 @@ project and then getting distracted... I'll...</description>
 for the RSS reader! I took a few days off from working
 on it due to exhaustion and a desire to avoid...</description>
         <category>coding</category>
-        <pubDate>Sat, 13 Apr 2024 04:00:00 GMT</pubDate>
+        <pubDate>Sat, 13 Apr 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Wed Apr 10 2024</title>
@@ -83,7 +93,7 @@ on it due to exhaustion and a desire to avoid...</description>
         <description>Been taking a minor break from the rss reader app development
 while I think about where I want to go with it next.  I have been pretty unhappy with th...</description>
         <category>coding</category>
-        <pubDate>Wed, 10 Apr 2024 04:00:00 GMT</pubDate>
+        <pubDate>Wed, 10 Apr 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Sat Apr 06 2024</title>
@@ -93,7 +103,7 @@ while I think about where I want to go with it next.  I have been pretty unhappy
 on my timpepper.dev home page!  Very excited to have finally figured out all the odds
 and ends for...</description>
         <category>coding</category>
-        <pubDate>Sat, 06 Apr 2024 04:00:00 GMT</pubDate>
+        <pubDate>Sat, 06 Apr 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Fri Apr 05 2024</title>
@@ -102,7 +112,7 @@ and ends for...</description>
         <description>After a serious battle and an entire auth rewrite
 I've finally got my little rss-reader web app deployed! I ended up going through several tools tryin...</description>
         <category>coding</category>
-        <pubDate>Fri, 05 Apr 2024 04:00:00 GMT</pubDate>
+        <pubDate>Fri, 05 Apr 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Tue Apr 02 2024</title>
@@ -111,7 +121,7 @@ I've finally got my little rss-reader web app deployed! I ended up going through
         <description>I've done it! Mostly! I've got my rss-reader project
 in to an almost deliverable state!  I solved two major problems today:  1. Handling both RSS spec...</description>
         <category>coding</category>
-        <pubDate>Tue, 02 Apr 2024 04:00:00 GMT</pubDate>
+        <pubDate>Tue, 02 Apr 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Sat Mar 30 2024</title>
@@ -121,7 +131,7 @@ in to an almost deliverable state!  I solved two major problems today:  1. Handl
 pretty deep in the murk trying to figure out how
 to get that rss-feed idea I had mentioned working...</description>
         <category>coding</category>
-        <pubDate>Sat, 30 Mar 2024 04:00:00 GMT</pubDate>
+        <pubDate>Sat, 30 Mar 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Sun Mar 24 2024</title>
@@ -130,7 +140,7 @@ to get that rss-feed idea I had mentioned working...</description>
         <description>Well today was kind of a bust as far as coding goes! I got super sidetracked randomly deciding to see if 
 I could figure out how to implement an RSS r...</description>
         <category>coding</category>
-        <pubDate>Sun, 24 Mar 2024 04:00:00 GMT</pubDate>
+        <pubDate>Sun, 24 Mar 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Sat Mar 23 2024</title>
@@ -139,7 +149,7 @@ I could figure out how to implement an RSS r...</description>
         <description>Finally merged in the first major iteration of the A* Search Algorithm
 logic!!! Very exciting stuff. It's definitely not perfect though. Currently if...</description>
         <category>coding</category>
-        <pubDate>Sat, 23 Mar 2024 04:00:00 GMT</pubDate>
+        <pubDate>Sat, 23 Mar 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Fri Mar 22 2024</title>
@@ -149,7 +159,7 @@ logic!!! Very exciting stuff. It's definitely not perfect though. Currently if..
 I was feeling like the blog was quickly getting a little
 cluttered on the front page! I am...</description>
         <category>coding</category>
-        <pubDate>Fri, 22 Mar 2024 04:00:00 GMT</pubDate>
+        <pubDate>Fri, 22 Mar 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Tue Mar 19 2024</title>
@@ -158,7 +168,7 @@ cluttered on the front page! I am...</description>
         <description>I haven't merged the code to my main branch yet, but I've 
 made some serious progress on the A* algorithm logic!! I now have the UI populating with ou...</description>
         <category>coding</category>
-        <pubDate>Tue, 19 Mar 2024 04:00:00 GMT</pubDate>
+        <pubDate>Tue, 19 Mar 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Fri Mar 15 2024</title>
@@ -167,7 +177,7 @@ made some serious progress on the A* algorithm logic!! I now have the UI populat
         <description>Just did a pretty big UI update for the A* search page. It's not super pretty
 yet, but it does have all the general functionality I'd expect a test /...</description>
         <category>coding</category>
-        <pubDate>Fri, 15 Mar 2024 04:00:00 GMT</pubDate>
+        <pubDate>Fri, 15 Mar 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Tue Mar 12 2024</title>
@@ -176,7 +186,7 @@ yet, but it does have all the general functionality I'd expect a test /...</desc
         <description>Made some pretty good progress on my A* repository UI today. Didn't work on the actual
 search logic at all, but now you can at least click around in t...</description>
         <category>coding</category>
-        <pubDate>Tue, 12 Mar 2024 04:00:00 GMT</pubDate>
+        <pubDate>Tue, 12 Mar 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Mon Mar 11 2024</title>
@@ -185,7 +195,7 @@ search logic at all, but now you can at least click around in t...</description>
         <description>In my last post I mentioned that I had gotten my project / website structure up and running!
 Well I was wrong! It was completely hosed, so I've gone a...</description>
         <category>coding</category>
-        <pubDate>Mon, 11 Mar 2024 04:00:00 GMT</pubDate>
+        <pubDate>Mon, 11 Mar 2024 07:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Thu Mar 07 2024</title>
@@ -194,7 +204,7 @@ Well I was wrong! It was completely hosed, so I've gone a...</description>
         <description>Another day hacking away at this blog! I was hoping to have a bit more of a clean setup
 for this repository, but I think it's fine as is for now. I've...</description>
         <category>coding</category>
-        <pubDate>Thu, 07 Mar 2024 05:00:00 GMT</pubDate>
+        <pubDate>Thu, 07 Mar 2024 08:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Wed Mar 06 2024</title>
@@ -203,7 +213,7 @@ for this repository, but I think it's fine as is for now. I've...</description>
         <description>The scope for this little website is ballooning a bit.  I want to try and keep track of various side projects here, 
 and also give myself an attractiv...</description>
         <category>coding</category>
-        <pubDate>Wed, 06 Mar 2024 05:00:00 GMT</pubDate>
+        <pubDate>Wed, 06 Mar 2024 08:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Tue Mar 05 2024</title>
@@ -212,7 +222,7 @@ and also give myself an attractiv...</description>
         <description>Wow! I just stumbled on this project after creating it and immediately abandoning it... as one does?
 I think I will be using this is a playground for...</description>
         <category>coding</category>
-        <pubDate>Tue, 05 Mar 2024 05:00:00 GMT</pubDate>
+        <pubDate>Tue, 05 Mar 2024 08:00:00 GMT</pubDate>
       </item>
       <item>
         <title>Tue Aug 25 2020</title>
@@ -221,7 +231,7 @@ I think I will be using this is a playground for...</description>
         <description>Hey there, I'm Tim Pepper, a software developer living in the beautiful American North East.
 I've been trying for a pretty long time to create a forma...</description>
         <category>coding</category>
-        <pubDate>Tue, 25 Aug 2020 04:00:00 GMT</pubDate>
+        <pubDate>Tue, 25 Aug 2020 07:00:00 GMT</pubDate>
       </item>
     </channel>
   </rss>
