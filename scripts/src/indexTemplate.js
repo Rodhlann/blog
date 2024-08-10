@@ -37,7 +37,16 @@ ${content}
 
 const generateIndexHtml = (path, posts, dirs) => {
   const postLinks = posts
-    .map((name) => `<p>&nbsp;<a href="./${name}.html">${name}.txt</a></p>`).join('\n')
+    .map((name) => {
+      const parts = name.split('_');
+      if (parts.length == 2) {
+        console.log(parts);
+        const [source, file] = parts;
+        return `<p>&nbsp;<a href="./${name}.html">${file}.txt</a> <span class="post-tag">(${source})</span></p>`
+      } else {
+        return `<p>&nbsp;<a href="./${name}.html">${name}.txt</a></p>`
+      }
+    }).join('\n')
 
   const dirLinks = dirs
     .map(({path}) => {

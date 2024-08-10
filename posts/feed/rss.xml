@@ -6,12 +6,12 @@
       <link>https://timpepper.dev/blog</link>
       <description>The RSS feed for the timpepper.dev blog</description>
       <language>en-us</language>
-      <lastBuildDate>Mon, 05 Aug 2024 05:32:38 GMT</lastBuildDate>
+      <lastBuildDate>Sat, 10 Aug 2024 01:42:50 GMT</lastBuildDate>
       <generator>timpepper.dev static site generator</generator>
       <item>
         <title>Sun Aug 04 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-08-04.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-08-04.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-08-04.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-08-04.html</guid>
         <description>Wow! it's somehow been 3 months since my last update! 
 In that time I have moved cross-country to the San Francisco area, 
 as hinted at in my previous...</description>
@@ -20,8 +20,8 @@ as hinted at in my previous...</description>
       </item>
       <item>
         <title>Tue May 14 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-05-14.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-05-14.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-05-14.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-05-14.html</guid>
         <description>It's been a bit! Took a quick trip to San Francisco
 to check out the area and I didn't bring my laptop or 
 anything. A nice break from the chaos! Time...</description>
@@ -30,8 +30,8 @@ anything. A nice break from the chaos! Time...</description>
       </item>
       <item>
         <title>Sun Apr 28 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-04-28.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-04-28.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-28.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-28.html</guid>
         <description>Using my Rust A* Search Algorithm implementation as reference
 I was able to significantly improve search times 
 in my JavaScript implementation!!  I e...</description>
@@ -40,8 +40,8 @@ in my JavaScript implementation!!  I e...</description>
       </item>
       <item>
         <title>Wed Apr 24 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-04-24.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-04-24.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-24.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-24.html</guid>
         <description>Knocked out another rust project! This time I 
 implemented the A* search algorithm with rust, which
 is good news for my other A* search project! I am...</description>
@@ -50,17 +50,18 @@ is good news for my other A* search project! I am...</description>
       </item>
       <item>
         <title>Tue Apr 23 2024</title>
-        <link>https://timpepper.dev/blog/posts/2024-04-23.html</link>
-        <guid>https://timpepper.dev/blog/posts/2024-04-23.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-23.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-23.html</guid>
         <description>I've just completed my first Rust project!!! When I go out to learn a new programming language
 my first goal is always to learn enough to build
 a game...</description>
         <category>coding</category>
         <pubDate>Tue, 23 Apr 2024 07:00:00 GMT</pubDate>
-      </item><item>
+      </item>
+      <item>
         <title>Tue Apr 16 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-16.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-16.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-16.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-16.html</guid>
         <description>Over the last several days I've been noticing
 an issue loading certain feeds in the rss-reader. It appears that feeds that are served as the contents...</description>
         <category>coding</category>
@@ -68,8 +69,8 @@ an issue loading certain feeds in the rss-reader. It appears that feeds that are
       </item>
       <item>
         <title>Sun Apr 14 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-14.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-14.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-14.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-14.html</guid>
         <description>Ended up starting my Rust journey this weekend! 
 (I know... I keep saying I am going to working on the A*
 project and then getting distracted... I'll...</description>
@@ -78,8 +79,8 @@ project and then getting distracted... I'll...</description>
       </item>
       <item>
         <title>Sat Apr 13 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-13.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-13.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-13.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-13.html</guid>
         <description>I have finally got the category filtering merged
 for the RSS reader! I took a few days off from working
 on it due to exhaustion and a desire to avoid...</description>
@@ -88,8 +89,8 @@ on it due to exhaustion and a desire to avoid...</description>
       </item>
       <item>
         <title>Wed Apr 10 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-10.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-10.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-10.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-10.html</guid>
         <description>Been taking a minor break from the rss reader app development
 while I think about where I want to go with it next.  I have been pretty unhappy with th...</description>
         <category>coding</category>
@@ -97,8 +98,8 @@ while I think about where I want to go with it next.  I have been pretty unhappy
       </item>
       <item>
         <title>Sat Apr 06 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-06.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-06.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-06.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-06.html</guid>
         <description>I've finally got the RSS reader deployed and linked
 on my timpepper.dev home page!  Very excited to have finally figured out all the odds
 and ends for...</description>
@@ -107,8 +108,8 @@ and ends for...</description>
       </item>
       <item>
         <title>Fri Apr 05 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-05.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-05.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-05.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-05.html</guid>
         <description>After a serious battle and an entire auth rewrite
 I've finally got my little rss-reader web app deployed! I ended up going through several tools tryin...</description>
         <category>coding</category>
@@ -116,8 +117,8 @@ I've finally got my little rss-reader web app deployed! I ended up going through
       </item>
       <item>
         <title>Tue Apr 02 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-02.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-04-02.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-04-02.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-04-02.html</guid>
         <description>I've done it! Mostly! I've got my rss-reader project
 in to an almost deliverable state!  I solved two major problems today:  1. Handling both RSS spec...</description>
         <category>coding</category>
@@ -125,8 +126,8 @@ in to an almost deliverable state!  I solved two major problems today:  1. Handl
       </item>
       <item>
         <title>Sat Mar 30 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-30.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-30.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-30.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-30.html</guid>
         <description>It's been a few days since I've posted! I have been
 pretty deep in the murk trying to figure out how
 to get that rss-feed idea I had mentioned working...</description>
@@ -135,8 +136,8 @@ to get that rss-feed idea I had mentioned working...</description>
       </item>
       <item>
         <title>Sun Mar 24 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-24.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-24.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-24.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-24.html</guid>
         <description>Well today was kind of a bust as far as coding goes! I got super sidetracked randomly deciding to see if 
 I could figure out how to implement an RSS r...</description>
         <category>coding</category>
@@ -144,8 +145,8 @@ I could figure out how to implement an RSS r...</description>
       </item>
       <item>
         <title>Sat Mar 23 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-23.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-23.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-23.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-23.html</guid>
         <description>Finally merged in the first major iteration of the A* Search Algorithm
 logic!!! Very exciting stuff. It's definitely not perfect though. Currently if...</description>
         <category>coding</category>
@@ -153,8 +154,8 @@ logic!!! Very exciting stuff. It's definitely not perfect though. Currently if..
       </item>
       <item>
         <title>Fri Mar 22 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-22.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-22.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-22.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-22.html</guid>
         <description>Took a quick detour from the A* algorithm workflow because
 I was feeling like the blog was quickly getting a little
 cluttered on the front page! I am...</description>
@@ -163,8 +164,8 @@ cluttered on the front page! I am...</description>
       </item>
       <item>
         <title>Tue Mar 19 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-19.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-19.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-19.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-19.html</guid>
         <description>I haven't merged the code to my main branch yet, but I've 
 made some serious progress on the A* algorithm logic!! I now have the UI populating with ou...</description>
         <category>coding</category>
@@ -172,8 +173,8 @@ made some serious progress on the A* algorithm logic!! I now have the UI populat
       </item>
       <item>
         <title>Fri Mar 15 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-15.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-15.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-15.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-15.html</guid>
         <description>Just did a pretty big UI update for the A* search page. It's not super pretty
 yet, but it does have all the general functionality I'd expect a test /...</description>
         <category>coding</category>
@@ -181,8 +182,8 @@ yet, but it does have all the general functionality I'd expect a test /...</desc
       </item>
       <item>
         <title>Tue Mar 12 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-12.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-12.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-12.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-12.html</guid>
         <description>Made some pretty good progress on my A* repository UI today. Didn't work on the actual
 search logic at all, but now you can at least click around in t...</description>
         <category>coding</category>
@@ -190,8 +191,8 @@ search logic at all, but now you can at least click around in t...</description>
       </item>
       <item>
         <title>Mon Mar 11 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-11.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-11.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-11.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-11.html</guid>
         <description>In my last post I mentioned that I had gotten my project / website structure up and running!
 Well I was wrong! It was completely hosed, so I've gone a...</description>
         <category>coding</category>
@@ -199,8 +200,8 @@ Well I was wrong! It was completely hosed, so I've gone a...</description>
       </item>
       <item>
         <title>Thu Mar 07 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-07.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-07.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-07.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-07.html</guid>
         <description>Another day hacking away at this blog! I was hoping to have a bit more of a clean setup
 for this repository, but I think it's fine as is for now. I've...</description>
         <category>coding</category>
@@ -208,8 +209,8 @@ for this repository, but I think it's fine as is for now. I've...</description>
       </item>
       <item>
         <title>Wed Mar 06 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-06.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-06.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-06.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-06.html</guid>
         <description>The scope for this little website is ballooning a bit.  I want to try and keep track of various side projects here, 
 and also give myself an attractiv...</description>
         <category>coding</category>
@@ -217,8 +218,8 @@ and also give myself an attractiv...</description>
       </item>
       <item>
         <title>Tue Mar 05 2024</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-05.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2024-03-05.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-03-05.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-03-05.html</guid>
         <description>Wow! I just stumbled on this project after creating it and immediately abandoning it... as one does?
 I think I will be using this is a playground for...</description>
         <category>coding</category>
@@ -226,12 +227,22 @@ I think I will be using this is a playground for...</description>
       </item>
       <item>
         <title>Tue Aug 25 2020</title>
-        <link>https://timpepper.dev/blog/posts/OLDER_POSTS/2020-08-25.html</link>
-        <guid>https://timpepper.dev/blog/posts/OLDER_POSTS/2020-08-25.html</guid>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2020-08-25.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2020-08-25.html</guid>
         <description>Hey there, I'm Tim Pepper, a software developer living in the beautiful American North East.
 I've been trying for a pretty long time to create a forma...</description>
         <category>coding</category>
         <pubDate>Tue, 25 Aug 2020 07:00:00 GMT</pubDate>
+      </item>
+      <item>
+        <title>Fri Aug 9 2024]
+
+Test</title>
+        <link>https://timpepper.dev/blog/text_posts/FITNESS/2024-08-09.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/FITNESS/2024-08-09.html</guid>
+        <description></description>
+        <category>coding</category>
+        <pubDate>Invalid Date</pubDate>
       </item>
     </channel>
   </rss>

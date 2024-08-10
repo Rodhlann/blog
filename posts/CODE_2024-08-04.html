@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/terminal.css" />
+  </head>
+
+  <script>
+    function setDate() {
+      document.querySelectorAll('.date')
+        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    }
+  </script>
+
+  <body onload="setDate()">
+    <header>
+  <div class="header-text">~/timpepper.dev/blog</div>
+    <div class="rss-link-wrapper">
+      <a class="rss-link" href="https://timpepper.dev/blog/posts/feed/rss.xml">
+        <img class="rss-icon" src="../images/rss-vector.png" alt="RSS Feed Logo">
+      </a>
+    </div>
+  </header>
+
+    <section id="terminal">
+      <article>
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;cat CODE_2024-08-04.txt</div>
+        
+<p>[Sun Aug 04 2024]</p>
+<p>Wow! it's somehow been 3 months since my last update! 
+In that time I have moved cross-country to the San Francisco area, 
+as hinted at in my previous post. I haven't had much time
+to write code in the interim, it has been a pretty time consuming and
+stressful process, but we made it! </p>
+<p>We packed everything we owned in to two shipping crates, and put the pets 
+in the car and drove an almost straight shot over 5 days across the country. 
+We did see some really incredible sights along the way, and as crazy as it 
+was to just pick up and move I think we really nailed the entire process. </p>
+<p>The Bay Area is pretty incredible. The weather is amazing, and there
+is seemingly limitless stuff to do. We have spent plenty of time
+checking out all the local restaurants and exploring the ample outdoor
+activities this area provides. </p>
+<p>I am still working East Coast hours, which has been a pretty major shift in
+my schedule, and has contributed to nearly constant exhaustion. Working from 6-2
+is wild, though it has been pretty awesome getting off of work and still having
+my entire day ahead of me. </p>
+<p>Even with all that time I've been finding it difficult to motivate to code... I 
+think it's a mixture of exhaustion and being a bit overwhelmed still with the 
+whole experience, but my RSS Reader rewrite (did I mention I was doing that?) 
+has been pretty much entirely on hold. </p>
+<p>This is unfortunate, mostly, because I am pretty sure the free Postgres DB instance
+I was using for the original reader expired so the deployment is now dead. I was really enjoying 
+having a curated list of feeds, and not having it for the past few months has left me
+feeling a bit disconnected. Perhaps that disconnect is also hampering my urge to code. </p>
+<p>I did recently restructure the entire Rust backend I've been working on. I think 
+that if I can just get in there and bust out the API and storage I should be 
+able to get the wheels turning on the whole thing again, but starting is always the hardest
+part!</p>
+<p>Hopefully I will have some more updates in the near future! Even if no one is reading
+my intent is to keep coding and keeping this blog to remind myself of my progress. </p>
+<p>I did fix the link to this blog from my main site at least! There's something! </p>
+
+        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
+        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
+      </article>
+    </section>
+  </body>
+</html>
