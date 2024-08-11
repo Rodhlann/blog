@@ -58,7 +58,7 @@ ${path}/${fileName} [read-only]
 
 const generatePostHtml = (rawText, fileName, path) => {
   const relative = calculateRelativePathString(path)
-  const headBlockContent = headBlockFromTemplate(`${relative}styles/terminal.css`)
+  const headBlockContent = headBlockFromTemplate(relative, 'styles/terminal.css')
   const headerContent = headerFromTemplate(relative)
 
   const htmlContent = rawText.replaceAll('\r\n', '\n')

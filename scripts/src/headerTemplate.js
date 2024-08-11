@@ -1,8 +1,9 @@
-const headBlockFromTemplate = (stylesPath) => `<head>
+const headBlockFromTemplate = (relativePath, stylesPath) => `<head>
     <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
     <title>timpepper.dev</title>
+    <link rel="icon" href="${relativePath}images/terminal.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="${stylesPath}" />
+    <link rel="stylesheet" href="${relativePath}${stylesPath}" />
   </head>`
 
 const headerFromTemplate = (relativePath) => `<header>

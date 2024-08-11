@@ -54,7 +54,7 @@ const generateIndexHtml = (path, posts, dirs) => {
     }).join('\n')
   
   const relative = calculateRelativePathString(path)
-  const headBlockContent = headBlockFromTemplate(`${relative}styles/terminal.css`)
+  const headBlockContent = headBlockFromTemplate(relative, 'styles/terminal.css')
   const headerContent = headerFromTemplate(relative)
   const backLink = path === POSTS_PATH ? HOME_URL : '../index.html'
 
