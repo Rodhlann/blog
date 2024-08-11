@@ -7,15 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/terminal.css" />
   </head>
-
+  
   <script>
-    function setDate() {
-      document.querySelectorAll('.date')
-        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    function computeSpacing() {
+      const terminalStyle = window.getComputedStyle(document.getElementById("terminal"))
+      const terminalHeight = Number(terminalStyle.getPropertyValue("height")
+        .replace("px", ''))
+      const terminalLineHeight = Number(terminalStyle.getPropertyValue("line-height")
+        .replace("px", ''))
+
+      const contentStyle = window.getComputedStyle(document.getElementById("terminal-vim-content"))
+      const contentHeight = Number(contentStyle.getPropertyValue("height")
+        .replace("px", ''))
+
+      const footerStyle = window.getComputedStyle(document.getElementById("terminal-vim-footer"))
+      const footerHeight = Number(footerStyle.getPropertyValue("height")
+        .replace("px", ''))
+
+      const terminalLines = Math.floor(terminalHeight / terminalLineHeight)
+      const contentLines = Math.ceil(contentHeight / terminalLineHeight)
+      const footerLines = Math.ceil(footerHeight / terminalLineHeight)
+
+      const whiteSpace = terminalLines - contentLines - footerLines
+
+      if (whiteSpace > 0) {
+        const spacingEl = document.getElementById("terminal-vim-spacing")
+        spacingEl.innerHTML = Array(whiteSpace).fill('').map(() => "~").join('\n')
+      }
     }
   </script>
 
-  <body onload="setDate()">
+  <body onload="computeSpacing()">
     <header>
   <div class="header-text">~/timpepper.dev/blog</div>
     <div class="rss-link-wrapper">
@@ -26,10 +48,7 @@
   </header>
 
     <section id="terminal">
-      <article>
-        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;cat 2024-04-24.txt</div>
-        
+      <div id="terminal-vim-content">
 <p>[Wed Apr 24 2024]</p>
 <p>Knocked out another rust project! This time I 
 implemented the A* search algorithm with rust, which
@@ -56,10 +75,14 @@ try and get to the end of rust's Book first, since
 that's the final project in there. </p>
 <p>It's awesome to feel hyped on coding!! What a cool 
 thing. </p>
-
-        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
-      </article>
+      </div>
+      <pre id="terminal-vim-spacing"></pre>
+      <div id="terminal-vim-footer">
+        <p id="terminal-vim-path">
+./posts/CODE/2024-04-24.txt [read-only]
+        </p>
+        <a class="terminal-vim-command" href="#" onclick="history.back()">:q</a><span id="cursor">&block;</span>
+      </div>
     </section>
   </body>
 </html>

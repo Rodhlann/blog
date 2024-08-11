@@ -1,0 +1,108 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html, charset=UTF-8" />
+    <title>timpepper.dev</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../styles/terminal.css" />
+  </head>
+  
+  <script>
+    function computeSpacing() {
+      const terminalStyle = window.getComputedStyle(document.getElementById("terminal"))
+      const terminalHeight = Number(terminalStyle.getPropertyValue("height")
+        .replace("px", ''))
+      const terminalLineHeight = Number(terminalStyle.getPropertyValue("line-height")
+        .replace("px", ''))
+
+      const contentStyle = window.getComputedStyle(document.getElementById("terminal-vim-content"))
+      const contentHeight = Number(contentStyle.getPropertyValue("height")
+        .replace("px", ''))
+
+      const footerStyle = window.getComputedStyle(document.getElementById("terminal-vim-footer"))
+      const footerHeight = Number(footerStyle.getPropertyValue("height")
+        .replace("px", ''))
+
+      const terminalLines = Math.floor(terminalHeight / terminalLineHeight)
+      const contentLines = Math.ceil(contentHeight / terminalLineHeight)
+      const footerLines = Math.ceil(footerHeight / terminalLineHeight)
+
+      const whiteSpace = terminalLines - contentLines - footerLines
+
+      if (whiteSpace > 0) {
+        const spacingEl = document.getElementById("terminal-vim-spacing")
+        spacingEl.innerHTML = Array(whiteSpace).fill('').map(() => "~").join('\n')
+      }
+    }
+  </script>
+
+  <body onload="computeSpacing()">
+    <header>
+  <div class="header-text">~/timpepper.dev/blog</div>
+    <div class="rss-link-wrapper">
+      <a class="rss-link" href="https://timpepper.dev/blog/posts/feed/rss.xml">
+        <img class="rss-icon" src="../../images/rss-vector.png" alt="RSS Feed Logo">
+      </a>
+    </div>
+  </header>
+
+    <section id="terminal">
+      <div id="terminal-vim-content">
+<p>[Sat Aug 10 2024]</p>
+<p>I have started my next fitness journey! Moving to the
+Bay Area has left me a bit sedentary, which is pretty
+funny considering how nice it is outside pretty much every
+day...</p>
+<p>In the past I was mostly getting my physical activity  
+while inline skating, which is super fun and doesn't
+feel like working out, but since we moved I haven't much felt 
+like skating. I think this is mostly due to not being as 
+comfortable exploring the area as I had been in our previous 
+neighborhood. I think we live in a pretty safe area,
+but I don't see very many people just walking around for fun,
+or running for exercise, or anything like that. Perhaps I'm
+a bit self conscious in this new setting.</p>
+<p>There are a few parks around, and skateboarding is pretty big
+here, though I haven't picked up my skateboard since the beginning
+of Covid. But I do not quite have the confidence yet to go out
+to a skate park by myself...</p>
+<p>Anyways, I haven't been skating. So what else?</p>
+<p>I found a pretty basic beginner strength training regimen online
+that seems to be pretty much perfect for my current fitness level. 
+The first day totally kicked my butt, but subsequent days have felt
+a lot better, while still keeping me sore and feeling good. </p>
+<p>The current plan is to do alternating days of strength training and 
+cardio, with one rest day a week. This should keep me pretty active,
+even if I'm not skating, and will hopefully help me build some
+confidence while I build up the nerve to start skating again. </p>
+<p>The current regiment is:</p>
+<p><b>Weight training</b></p>
+<p>3 cycles of:</p>
+<p>- 20 squats</p>
+<p>- 10 pushups</p>
+<p>- 10 walking lunges</p>
+<p>- 10 Dumbbell rows</p>
+<p>- 15 second plank</p>
+<p>- 30 jumping jacks</p>
+<p><b>Cardio</b></p>
+<p>- 10 mins jump rope</p>
+<p>This is all pretty manageable for me currently, but I will
+hopefully be bumping up the intensity over time. I don't really
+have a fitness goal, specifically, but I am hoping to improve 
+my confidence and mental health, mostly. </p>
+<p>I also think that building core strength and balance could help
+a lot when I do get back to skating! </p>
+<p>Hopefully good things to come. My plan is to try and do a daily journal
+of my progress here, and we'll see where that goes!</p>
+      </div>
+      <pre id="terminal-vim-spacing"></pre>
+      <div id="terminal-vim-footer">
+        <p id="terminal-vim-path">
+./posts/FITNESS/2024-08-10.txt [read-only]
+        </p>
+        <a class="terminal-vim-command" href="#" onclick="history.back()">:q</a><span id="cursor">&block;</span>
+      </div>
+    </section>
+  </body>
+</html>

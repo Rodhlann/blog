@@ -22,12 +22,9 @@ function main() {
 
   try {
     // Clean up
-    log.info("Cleaning up", POSTS_PATH);
+    log.info("Delete output dir", POSTS_PATH);
     fs.rmSync(POSTS_PATH, { recursive: true, force: true });
     fs.mkdirSync(POSTS_PATH);
-    fs.readdirSync(INPUT_PATH)
-      .filter((file) => file.includes(".txt"))
-      .forEach((file) => fs.rmSync(`${INPUT_PATH}/${file}`))
 
     // Read files and dirs from INPUT_PATH and generate output tree for INPUT_PATH
     const tree = generateDirectoryTree(INPUT_PATH, INPUT_PATH);
@@ -43,6 +40,11 @@ function main() {
     generateContent(updatedTree);
 
     generateFeed(tree);
+
+    log.info("Clean up temp files...")
+    fs.readdirSync(INPUT_PATH)
+      .filter((file) => file.includes(".txt"))
+      .forEach((file) => fs.rmSync(`${INPUT_PATH}/${file}`))
   } catch (e) {
     log.error("Failed to generate blog output", { errorMessage: e.message });
     log.error("FAIL!");

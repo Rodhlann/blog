@@ -4,31 +4,54 @@ const { POSTS_PATH, INPUT_PATH } = require('./constants.js')
 const { log } = require('../util/logger.js')
 const { calculateRelativePathString } = require('../util/calculateRelativePathString.js')
 
-const htmlFromTemplate = (headBlock, header, content, fileName) => `<!DOCTYPE HTML>
+const htmlFromTemplate = (headBlock, header, content, path, fileName) => `<!DOCTYPE HTML>
 
 <html>
   ${headBlock}
-
+  
   <script>
-    function setDate() {
-      document.querySelectorAll('.date')
-        .forEach(el => el.innerHTML = \`[\$\{new Date().toDateString()}]\`);
+    function computeSpacing() {
+      const terminalStyle = window.getComputedStyle(document.getElementById("terminal"))
+      const terminalHeight = Number(terminalStyle.getPropertyValue("height")
+        .replace("px", ''))
+      const terminalLineHeight = Number(terminalStyle.getPropertyValue("line-height")
+        .replace("px", ''))
+
+      const contentStyle = window.getComputedStyle(document.getElementById("terminal-vim-content"))
+      const contentHeight = Number(contentStyle.getPropertyValue("height")
+        .replace("px", ''))
+
+      const footerStyle = window.getComputedStyle(document.getElementById("terminal-vim-footer"))
+      const footerHeight = Number(footerStyle.getPropertyValue("height")
+        .replace("px", ''))
+
+      const terminalLines = Math.floor(terminalHeight / terminalLineHeight)
+      const contentLines = Math.ceil(contentHeight / terminalLineHeight)
+      const footerLines = Math.ceil(footerHeight / terminalLineHeight)
+
+      const whiteSpace = terminalLines - contentLines - footerLines
+
+      if (whiteSpace > 0) {
+        const spacingEl = document.getElementById("terminal-vim-spacing")
+        spacingEl.innerHTML = Array(whiteSpace).fill('').map(() => "~").join('\\n')
+      }
     }
   </script>
 
-  <body onload="setDate()">
+  <body onload="computeSpacing()">
     ${header}
 
     <section id="terminal">
-      <article>
-        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;cat ${fileName}</div>
-        
+      <div id="terminal-vim-content">
 ${content}
-
-        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
-      </article>
+      </div>
+      <pre id="terminal-vim-spacing"></pre>
+      <div id="terminal-vim-footer">
+        <p id="terminal-vim-path">
+${path}/${fileName} [read-only]
+        </p>
+        <a class="terminal-vim-command" href="#" onclick="history.back()">:q</a><span id="cursor">&block;</span>
+      </div>
     </section>
   </body>
 </html>`
@@ -43,7 +66,7 @@ const generatePostHtml = (rawText, fileName, path) => {
     .filter(Boolean)
     .map((section) => `<p>${section}</p>`).join('\n')
 
-  return htmlFromTemplate(headBlockContent, headerContent, htmlContent, fileName)
+  return htmlFromTemplate(headBlockContent, headerContent, htmlContent, path, fileName)
 }
 
 function generatePosts(path, posts) {
@@ -68,8 +91,10 @@ function generatePosts(path, posts) {
   
   generated.forEach(({name, html}) => {
     const fileName = `${path}/${name}.html`
-    log.info('[INFO] Writing post', fileName)
-    fs.writeFileSync(fileName, html)
+    if (!fileName.includes("_")) {
+      log.info('[INFO] Writing post', fileName)
+      fs.writeFileSync(fileName, html)
+    }
   })
 }
 

@@ -1,0 +1,64 @@
+[Sat Aug 10 2024]
+
+In an effort to finish my Rust powered RSS reader by
+the end of the month, I have done a pretty significant
+refactor of my blog logic and visuals! 
+
+You may be asking yourself "how does that help move the
+RSS reader project forward?" 
+
+It doesn't!!! I just cannot keep myself from procrastinating on
+that project for some reason...
+
+Well, that's not entirely true. I have been doing some 
+research and tutorials on Rust REST services, and I do
+have a demo set up on Shuttle that I am hopeful I will
+be able to turn in to a working service soon... But that's
+not what I was working on today.
+
+That said, I am procrastinating, and I did finally make a big
+change to my blog's general build process and user experience. 
+
+I wanted to make it easier for me to write posts, while automating
+all of the obnoxious stuff like moving files around, and routing
+a user in the HTML output. 
+
+A few months ago I had done a bunch of work to make it possible 
+to have subdirectories in my blog's text_posts dir, which is where
+all the actual text content lives. It has been working fine since,
+but I never really took the next step of actually creating new non-code 
+subjects (until today!!). 
+
+What I really wanted was to be able to write my posts in the subdirectories,
+and then have the builder figure out what the 5 latest posts were, and 
+make those visible from the root directory when traversing the HTML blog
+output. 
+
+The main frustrations there were figuring out how to label the blog posts,
+since I've decided to name them terribly out of laziness and a desire for
+consistency; I didn't want to have a bunch of duplicate posts being created 
+to facilitate routing, and how to make the experience feel as close to the terminal 
+as possible, since I have decided to make my life difficult here.
+
+In the end I was able to use a generated suffix on my files to tag them
+as CODE or FITNESS or whatever, and add the label to the UI to help specify which
+subject they were related to. This only applies to the root directory, since
+it'll be pretty obvious what you're looking at in the sub directories.
+
+And for the "Terminal Experience™" I decided that a read-only vi window made
+more sense than the cat interface I had been using, because of the way the routing
+works. Since with cat your directory doesn't change, having the "cd ../" back-link 
+didn't make a lot of sense to me. But with vi, since you're entering a new program,
+I could make the back-link ":q" instead, which would be a more sensible return to 
+something in a terminal setting. 
+
+The whole terminal concept for the blog is pretty goofy, I think, but I do really
+like it. It's something that's been floating around in my head for years,
+and I'm honestly psyched I am getting it to a place where it feels kind of legit,
+and I honestly don't care if no one else thinks so! 
+
+That's a lie, I do care a little. But I'm pretty sure no one is actually seeing it,
+so I can do whatever I want! Even better! 
+
+Anyways, I hope to have the backend for my Rust project done this weekend. And if not,
+then next week for sure... right?

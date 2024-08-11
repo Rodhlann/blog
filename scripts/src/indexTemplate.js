@@ -40,9 +40,8 @@ const generateIndexHtml = (path, posts, dirs) => {
     .map((name) => {
       const parts = name.split('_');
       if (parts.length == 2) {
-        console.log(parts);
         const [source, file] = parts;
-        return `<p>&nbsp;<a href="./${name}.html">${file}.txt</a> <span class="post-tag">(${source})</span></p>`
+        return `<p>&nbsp;<a href="./${source}/${file}.html">${file}.txt</a> <span class="post-tag">(${source})</span></p>`
       } else {
         return `<p>&nbsp;<a href="./${name}.html">${name}.txt</a></p>`
       }

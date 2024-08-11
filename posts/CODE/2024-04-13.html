@@ -7,15 +7,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../styles/terminal.css" />
   </head>
-
+  
   <script>
-    function setDate() {
-      document.querySelectorAll('.date')
-        .forEach(el => el.innerHTML = `[${new Date().toDateString()}]`);
+    function computeSpacing() {
+      const terminalStyle = window.getComputedStyle(document.getElementById("terminal"))
+      const terminalHeight = Number(terminalStyle.getPropertyValue("height")
+        .replace("px", ''))
+      const terminalLineHeight = Number(terminalStyle.getPropertyValue("line-height")
+        .replace("px", ''))
+
+      const contentStyle = window.getComputedStyle(document.getElementById("terminal-vim-content"))
+      const contentHeight = Number(contentStyle.getPropertyValue("height")
+        .replace("px", ''))
+
+      const footerStyle = window.getComputedStyle(document.getElementById("terminal-vim-footer"))
+      const footerHeight = Number(footerStyle.getPropertyValue("height")
+        .replace("px", ''))
+
+      const terminalLines = Math.floor(terminalHeight / terminalLineHeight)
+      const contentLines = Math.ceil(contentHeight / terminalLineHeight)
+      const footerLines = Math.ceil(footerHeight / terminalLineHeight)
+
+      const whiteSpace = terminalLines - contentLines - footerLines
+
+      if (whiteSpace > 0) {
+        const spacingEl = document.getElementById("terminal-vim-spacing")
+        spacingEl.innerHTML = Array(whiteSpace).fill('').map(() => "~").join('\n')
+      }
     }
   </script>
 
-  <body onload="setDate()">
+  <body onload="computeSpacing()">
     <header>
   <div class="header-text">~/timpepper.dev/blog</div>
     <div class="rss-link-wrapper">
@@ -26,10 +48,7 @@
   </header>
 
     <section id="terminal">
-      <article>
-        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;cat 2024-04-13.txt</div>
-        
+      <div id="terminal-vim-content">
 <p>[Sat Apr 13 2024]</p>
 <p>I have finally got the category filtering merged
 for the RSS reader! I took a few days off from working
@@ -97,10 +116,14 @@ while. I really want to finish up my A* search algorithm
 work, and I have big plans to learn some Rust next! </p>
 <p>Very excited for whatever's next! I'll keep you posted once I've
 figured it out for myself...</p>
-
-        <div>~/timpepper.dev/blog <br class="mobile-break"><span class="date" /></div>
-        <div>$&nbsp;<a href="./index.html">cd ../</a>&nbsp;<span id="cursor">&block;</span></div>
-      </article>
+      </div>
+      <pre id="terminal-vim-spacing"></pre>
+      <div id="terminal-vim-footer">
+        <p id="terminal-vim-path">
+./posts/CODE/2024-04-13.txt [read-only]
+        </p>
+        <a class="terminal-vim-command" href="#" onclick="history.back()">:q</a><span id="cursor">&block;</span>
+      </div>
     </section>
   </body>
 </html>

@@ -14,44 +14,57 @@ const buildItem = ({ title, link, description, date }) => `\n      <item>
         <pubDate>${getDate(date)}</pubDate>
       </item>`;
 
-const buildItems = ([...branches]) => {
-  return branches.reduce((branchAcc, { path, posts, dirs }) => {
-    const xmlItems = posts.reduce((postAcc, post) => {
-      const inputPostFileType = '.txt'
-      const inputFileName = post + inputPostFileType
-      const inputPath = path.replace(POSTS_PATH, INPUT_PATH)
-      const textBlocks = fs.readFileSync(`${inputPath}/${inputFileName}`, 'utf8')
-        ?.split("\n\n");
-      const heading = textBlocks.shift();
-      const date = heading.substring(1, heading.length - 1);
+const parseTree = (branches) => {
+  const allPosts = []
 
-      const postContent = textBlocks.join(" ");
-      const postLength = postContent.length;
-      const trunc = 150;
-      const truncLength = postLength > trunc ? trunc : postLength;
-      const truncEllipse = postLength > trunc ? "..." : "";
-      const description = postContent.slice(0, truncLength).trim() + truncEllipse;
+  branches.forEach(({ path, posts, dirs }) => {
+    posts.forEach((post) => {
+      allPosts.push({ path, name: post })
+    })
+    const nested = parseTree(dirs)
+    allPosts.push([...nested]);
+  })
 
-      const outputPostFileType = '.html'
-      const outputFileName = post + outputPostFileType
-      const outputPath = path.replace(ROOT_PATH, '')
+  return allPosts.flat()
+}
+      
+const flattenPosts = (branches) => parseTree(branches)
 
-      const link = `${BLOG_URL}${outputPath}/${outputFileName}`;
+const buildItems = (posts) => {
+  return posts.reduce((postAcc, { path, name }) => {
+    const inputPostFileType = '.txt'
+    const inputFileName = name + inputPostFileType
+    const textBlocks = fs.readFileSync(`${path}/${inputFileName}`, 'utf8')
+      ?.replaceAll('\r\n', '\n').split("\n\n");
+    const heading = textBlocks.shift();
+    const date = heading.substring(1, heading.length - 1);
 
-      return (postAcc += buildItem({
-        title: date,
-        link,
-        description,
-        date: getDate(date),
-      }));
-    }, "");
+    const postContent = textBlocks.join(" ");
+    const postLength = postContent.length;
+    const trunc = 150;
+    const truncLength = postLength > trunc ? trunc : postLength;
+    const truncEllipse = postLength > trunc ? "..." : "";
+    const description = postContent.slice(0, truncLength).trim() + truncEllipse;
 
-    const subXmlItems = buildItems(dirs);
-    return branchAcc + (xmlItems + subXmlItems);
-  }, "").trim();
+    const outputPostFileType = '.html'
+    const outputFileName = name + outputPostFileType
+    const outputPath = path.replace(ROOT_PATH, '')
+
+    const link = `${BLOG_URL}${outputPath}/${outputFileName}`;
+
+    return (postAcc += buildItem({
+      title: `${date} (${path.replace(INPUT_PATH + '/', '')})`,
+      link,
+      description,
+      date: getDate(date),
+    }));
+  }, "");
 };
 
 const generateFeed = (tree) => {
+  const posts = flattenPosts(tree)
+    .sort((a, b) => b.name.localeCompare(a.name))
+
   const feed = `<?xml version="1.0"?>
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
@@ -62,7 +75,7 @@ const generateFeed = (tree) => {
       <language>en-us</language>
       <lastBuildDate>${getDate()}</lastBuildDate>
       <generator>timpepper.dev static site generator</generator>
-      ${buildItems(tree)}
+      ${buildItems(posts)}
     </channel>
   </rss>`;
 
