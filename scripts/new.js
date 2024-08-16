@@ -2,7 +2,6 @@ const fs = require('node:fs')
 const { INPUT_PATH } = require('./src/constants')
 const { log } = require('./util/logger.js')
 
-const exec = require('child_process').exec;
 var args = process.argv.slice(2);
 
 if (args.length != 1) {
@@ -31,4 +30,3 @@ log.info('Creating new post', file)
 fs.writeFileSync(file, `[${postDate}]\n\n`)
 
 log.info(`Opening ${file} in VSCODE`)
-exec(`code -r ${file}`);

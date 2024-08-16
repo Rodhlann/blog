@@ -6,9 +6,19 @@
       <link>https://timpepper.dev/blog</link>
       <description>The RSS feed for the timpepper.dev blog</description>
       <language>en-us</language>
-      <lastBuildDate>Sun, 11 Aug 2024 07:45:13 GMT</lastBuildDate>
+      <lastBuildDate>Fri, 16 Aug 2024 05:42:04 GMT</lastBuildDate>
       <generator>timpepper.dev static site generator</generator>
       
+      <item>
+        <title>Thu Aug 15 2024 (CODE)</title>
+        <link>https://timpepper.dev/blog/text_posts/CODE/2024-08-15.html</link>
+        <guid>https://timpepper.dev/blog/text_posts/CODE/2024-08-15.html</guid>
+        <description>You better believe I'm still procrastinating on my RSS Reader backend! 
+It's okay though because I'm still doing some Rust learning / coding
+in the me...</description>
+        <category>coding</category>
+        <pubDate>Thu, 15 Aug 2024 07:00:00 GMT</pubDate>
+      </item>
       <item>
         <title>Sat Aug 10 2024 (CODE)</title>
         <link>https://timpepper.dev/blog/text_posts/CODE/2024-08-10.html</link>

@@ -40,6 +40,7 @@ const generateIndexHtml = (path, posts, dirs) => {
     .map((name) => {
       const parts = name.split('_');
       if (parts.length == 2) {
+        // TODO: fix this sorting on the root index.html, FITNESS posts seem to be first no matter what? 
         const [source, file] = parts;
         return `<p>&nbsp;<a href="./${source}/${file}.html">${file}.txt</a> <span class="post-tag">(${source})</span></p>`
       } else {

@@ -1,0 +1,49 @@
+[Thu Aug 15 2024]
+
+You better believe I'm still procrastinating on my RSS Reader backend! 
+It's okay though because I'm still doing some Rust learning / coding
+in the mean time. 
+
+I kept hearing about people picking up the 2023 Advent of Code, which
+isn't something I've heard of our thought about in a few years. What
+a great opportunity to apply my limited Rust knowledge! 
+
+Day 1: Trebuchet
+
+I was pretty impressed right away with this one. I don't do a lot of 
+string parsing in my day-to-day, and creating a program to pull the
+numbers out of a string, determine the first and last, and then add 
+them was pretty fun. Definitely the type of scripting work I enjoy,
+and don't get to do very much...
+
+The second part was pretty awesome too! I have never intentionally 
+written a multi-threaded program before, but this seemed like a neat
+opportunity to try it out, given I was going to need to parse the same
+data set twice. I also have struggled a bit so far to wrap my head
+around the various Rust std lib thread tooling, so I have been looking
+for some practical ways to apply that knowledge. In the end I was
+able to parse the data sets concurrently, and mash the results together
+into a correct answer! Over-engineered? Probably... Worth it? Definitely!
+
+Day 2: Cube Conundrum
+
+This challenge wasn't nearly as difficult or tricky. Most of the challenge
+here was keeping track of string split levels, and dealing with some 
+compiler errors I haven't experienced yet. In the end I was able to knock 
+out both of the parts of this challenge in about an hour, which seemed
+pretty good to me!
+
+I would definitely like to keep running through these challenges, especially
+if there's more tricky ones like Day 1. I imagine they only get more difficult
+over time! It also gives me more opportunity to mess with the Rust std library,
+where the personal projects I've been working on are more focused on using
+external crates for a lot of the heavy lifting. 
+
+I'm still really loving Rust! There's definitely some moments where I'm 
+pulling my hair out because I still don't fully understand the lifetimes
+and borrow mechanics, but it is super satisfying writing a program that I can 
+mostly trust (assuming there's no programmer error...), without any additional
+fiddling. I'm also consistently impressed with the speed of my programs.
+Unfortunately, with Node.js it's difficult to get micro-second level benchmarks on 
+my functions, so getting to see these super quick run times in Rust is pretty
+foreign, but satisfying! 
