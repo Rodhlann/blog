@@ -45,6 +45,7 @@ const htmlFromTemplate = (headBlock, header, content, path, fileName) => `<!DOCT
       <div id="terminal-vim-content">
 ${content}
       </div>
+      <br />
       <pre id="terminal-vim-spacing"></pre>
       <div id="terminal-vim-footer">
         <p id="terminal-vim-path">

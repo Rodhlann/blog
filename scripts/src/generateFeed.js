@@ -48,9 +48,9 @@ const buildItems = (posts) => {
 
     const outputPostFileType = '.html'
     const outputFileName = name + outputPostFileType
-    const outputPath = path.replace(ROOT_PATH, '')
+    const outputPath = path.replace(INPUT_PATH, POSTS_PATH)
 
-    const link = `${BLOG_URL}${outputPath}/${outputFileName}`;
+    const link = `${BLOG_URL}${outputPath.substring(1)}/${outputFileName}`;
 
     return (postAcc += buildItem({
       title: `${date} (${path.replace(INPUT_PATH + '/', '')})`,

@@ -1,0 +1,27 @@
+[Mon Nov 18 2024]
+
+This week I finally decided to rebuild my personal website. After using it for a while, I realized that I wasn't too proud of the overly simplictic design, and wanted something that better represented my personality and interests. With the latest changes I finally think I have something I can be proud to share around, and I hope it's something that I can iterate on in the future.
+
+<b style="color: mediumpurple"># GenAI Tools</b>
+
+A few weeks ago, my work sent me to GitHub Universe. This was my first big tech conference, and it was awesome to get a taste of the Silicon Valley tech scene. One of the things that really left an impact on me was just how popular these GenAI tools like GitHub Copilot have become and how far their functionality has progressed since I first tinkered with Copilot years ago. 
+
+Without wanting to pay for tooling I wasn't certain I'd like, I chose to use Codeium as a test to see if GenAI code assist tools are something I'm interested in. It was honestly a perfect use case for this project. Since I have a solid understanding of how to write web apps, it gave me something to work with where I could really evaluate the code being generated and iterate on the output. It's a bit finicky sometimes, but overall the free tier autocomplete functionality seems pretty solid! The chat is fairly good as well, though I had mixed luck with the inline code assistance.
+
+I have also been taking some time to work with Claude after seeing it demoed at GitHub Universe. I have been liking it quite a bit more than ChatGPT for creative and code tasks. Its output is typically less verbose, and it is able to render full web views inline, which is honestly really cool. This came in handy while I was trying to figure out a new design for my site. I am pretty poor at web UI design, so having a tool to bounce ideas off of and have it generate actual React web views for me to play with was really helpful.
+
+Overall I am still extremely skeptical of the direction GenAI tooling is moving in, but I am also impressed with it, and I am intersted to see what the next year or two brings.
+
+<b style="color: mediumpurple"># New Design</b>
+
+My new website feels a lot more fresh and unique than what I had before. The previous UI was essentially monochrome, and only displayed the absolute basic information about me and my personal projects. 
+
+The new design has a modern terminal design, with some small animations that I think really bring the site to life. It also provides a bit more information about each of my projects and directly integrates with my blog by refrencing the RSS feed to show the latest posts, which finally ties together the little program ecosystem I've been developing. 
+
+<b style="color: mediumpurple"># Conclusion</b>
+
+There's still a lot of work to do! My blog posts are still just named by date and category, and I think I've boxed myself in a bit with the current design. I think I'll probably end up rewriting the entire static site generator for my blog in Rust, and redesign the data structure for my posts so they are easier to name, style, update, and distribute my blog in the future.
+
+I also think I'd like to unify my styles a bit across my projects. My Terminal themed Blog informed my direction with my RSS Reader project, and my RSS Reader informed my decision for my latest personal site design, but now each of them feels a bit fractured, especially since they are all interlinked now. I do like the unique qualities of each, but at least having similar accents and colors in each might add some unity to the whole thing.
+
+It's been really awesome to find all these little projects to tinker with, it seems like my personal project backlog is growing constantly! I am definitely excited to see where my future endeavors take me.
